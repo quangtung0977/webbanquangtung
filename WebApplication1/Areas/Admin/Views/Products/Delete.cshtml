@@ -1,0 +1,153 @@
+﻿@model WebApplication1.Areas.Admin.Models.sanpham
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>sanpham</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ten)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ten)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ngaytao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngaytao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ngaycapnhat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngaycapnhat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nguoitao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nguoitao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.motasoluoc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.motasoluoc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.motachitiet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.motachitiet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.daxoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.daxoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ghichu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ghichu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hienthi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hienthi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hinhdaidien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hinhdaidien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hinhanhsanpham)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hinhanhsanpham)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.thutuhien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.thutuhien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gianiemyet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gianiemyet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.giaban)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.giaban)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mathuonghieu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mathuonghieu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.loaisanpham1.ten)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.loaisanpham1.ten)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,74 @@
+﻿<!-- == jQuery Librery == -->
+<script src="~/js/jquery-2.2.4.min.js"></script>
+<!-- == Bootsrap js File == -->
+<script src="~/js/bootstrap.min.js"></script>
+<!-- == mixitup == -->
+<script src="~/js/mixitup.min.js"></script>
+<!-- == Select 2 == -->
+<script src="~/js/select2.min.js"></script>
+<!-- == Gallery popup == -->
+<script src="~/js/jquery.colorbox-min.js"></script>
+<!-- == Image Lazy Load == -->
+<script src="~/js/jquery.lazy.min.js"></script>
+<!-- == Slick == -->
+<script src="~/js/slick.min.js"></script>
+<!-- == Wow js == -->
+<script src="~/js/wow.min.js"></script>
+<!-- == Counter == -->
+<script src="~/js/jquery.waypoints.min.js"></script>
+<script src="~/js/jquery.counterup.min.js"></script>
+<!-- == custom Js File == -->
+<script src="~/js/custom.js"></script>
+<style>
+    .banner-area:before{
+        background:none;
+    }
+</style>
+
+@Html.Partial("_MainMenuArea")
+<div class="banner-area banner-area--about-us all-text-white text-center lazy" data-src="@ViewBag.arrBanner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="page-title">@Resources.Resource.gioithieu</h1>
+            </div>
+        </div>
+    </div>
+</div>
+   <div class="body-overlay"></div>
+    <section class="section-padding ash-white-bg" style="margin-bottom:0;padding-bottom:0">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    @{
+                        if (Model != null)
+                        {
+                            foreach (var item in Model)
+                            {
+                                <div class="gioithieu-content content_post">
+                                    @{
+                                        if (Session["CurrentCulture"] != null)
+                                        {
+                                            if (Session["CurrentCulture"].ToString() == "en-US")
+                                            {
+                                                @Html.Raw(item.noidung_en)
+                                            }
+                                            else
+                                            {
+                                                @Html.Raw(item.noidung)
+                                            }
+                                        }
+                                        else
+                                        {
+                                            @Html.Raw(item.noidung)
+                                        }
+                                    }
+                                </div>
+                                <hr />
+                            }
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </section>

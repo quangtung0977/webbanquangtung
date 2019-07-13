@@ -1,0 +1,126 @@
+﻿@model IEnumerable<WebApplication1.Areas.Admin.Models.sanpham>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ten)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.ngaytao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ngaycapnhat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nguoitao)
+        </th>*@
+        @*<th>
+            @Html.DisplayNameFor(model => model.motasoluoc)
+        </th>*@
+        @*<th>
+            @Html.DisplayNameFor(model => model.motachitiet)
+        </th>*@
+        @*<th>
+            @Html.DisplayNameFor(model => model.daxoa)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.ghichu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hienthi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hinhdaidien)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.hinhanhsanpham)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.thutuhien)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gianiemyet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.giaban)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mathuonghieu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.loaisanpham1.ten)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ten)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.ngaytao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ngaycapnhat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nguoitao)
+        </td>*@
+        @*<td>
+            @Html.DisplayFor(modelItem => item.motasoluoc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.motachitiet)
+        </td>*@
+        @*<td>
+            @Html.DisplayFor(modelItem => item.daxoa)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.ghichu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hienthi)
+        </td>
+        <td style="width:100px">
+            <div>
+                <img width="100" height="100" src="@item.hinhdaidien" alt="" />
+            </div>
+        </td>
+        
+        @*<td>
+            @Html.DisplayFor(modelItem => item.hinhanhsanpham)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.thutuhien)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gianiemyet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.giaban)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mathuonghieu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.loaisanpham1.ten)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

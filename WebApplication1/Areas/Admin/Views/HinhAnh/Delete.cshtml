@@ -1,0 +1,89 @@
+﻿@model WebApplication1.Areas.Admin.Models.admin_hinhanh
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>admin_hinhanh</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tenhinhanh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tenhinhanh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.urlhinhanh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.urlhinhanh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ngaytao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngaytao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ngaycapnhat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngaycapnhat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.daxoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.daxoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ghichu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ghichu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.admin_account.username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.admin_account.username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.admin_loaihinhanh.tenloaihinhanh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.admin_loaihinhanh.tenloaihinhanh)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

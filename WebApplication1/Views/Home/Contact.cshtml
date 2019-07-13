@@ -1,0 +1,172 @@
+﻿<!-- == jQuery Librery == -->
+<script src="~/js/jquery-2.2.4.min.js"></script>
+<!-- == Bootsrap js File == -->
+<script src="~/js/bootstrap.min.js"></script>
+<!-- == mixitup == -->
+<script src="~/js/mixitup.min.js"></script>
+<!-- == Select 2 == -->
+<script src="~/js/select2.min.js"></script>
+<!-- == Gallery popup == -->
+<script src="~/js/jquery.colorbox-min.js"></script>
+<!-- == Image Lazy Load == -->
+<script src="~/js/jquery.lazy.min.js"></script>
+<!-- == Slick == -->
+<script src="~/js/slick.min.js"></script>
+<!-- == Google Maps == -->
+@*<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBjaOVpxq-vyWE7EOrUjmYsDdxRSrlar08"></script>*@
+<script src="~/js/jquery.mapit.min.js"></script>
+<script src="~/js/map-init.js"></script>
+<!-- == custom Js File == -->
+<script src="~/js/custom.js"></script>
+
+<style>
+    .banner-area:before {
+        background: none;
+    }
+</style>
+@Html.Partial("_MainMenuArea")
+<div class="banner-area banner-area--contact all-text-white text-center lazy" data-src="@ViewBag.arrBanner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="page-title">@Resources.Resource.lienhe</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="body-overlay"></div>
+<section class="section-padding" style="padding-bottom:0">
+    <div class="col-md-12">
+        @{
+            if (Model != null)
+            {
+                foreach (var item in Model)
+                {
+                    <div class="gioithieu-content content_post">
+                        @{
+                            if (Session["CurrentCulture"] != null)
+                            {
+                                if (Session["CurrentCulture"].ToString() =="en-US")
+                                {
+                                    @Html.Raw(item.noidung_en)
+                                }
+                                else
+                                {
+                                    @Html.Raw(item.noidung)
+                                }
+                            }
+                            else
+                            {
+                                @Html.Raw(item.noidung)
+                            }
+                        }
+                        
+                    </div>
+                                <hr />
+                }
+            }
+        }
+    </div>
+    @*<div id="mapContainer"></div>*@
+
+    <div class="well" style="padding-bottom: 20px;">
+        @*<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1465793528923!2d106.70425771464737!3d10.800083492305477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528ba1cb685bd%3A0xb9f804a2ed48643a!2zxJDhuqFpIGjhu41jIFF14buRYyB04bq_IEjhu5NuZyBCw6BuZw!5e0!3m2!1svi!2s!4v1534015547502" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>*@
+        <iframe src="@ViewBag.ggmap" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+
+
+    <div class="container no-padding">
+        <div class="main-contact" style="margin-top: -5%;">
+            @*<form class="contact-form">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="input-group">
+                            <input type="text" placeholder="Name" class="input-group__input form-control" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="input-group">
+                            <input type="text" placeholder="Name" class="input-group__input form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Subject" class="input-group__input form-control" />
+                </div>
+                <div class="input-group">
+                    <textarea class="input-group__textarea form-control" placeholder="Message" rows="8" cols="80"></textarea>
+                </div>
+                <input type="submit" class="btn base-bg" value="Submit">
+                <span class="text-mute pdl15">* All fields are mandatory</span>
+            </form>*@
+            <div class="contact-address" style="width:100%;height:auto">
+                <div class="row">
+                    <div class="contact-address-item col-xs-12 col-sm-6">
+                        <span class="icon-wrap"><i class="fa fa-map-marker contact-icon"></i></span>
+                        <div class="text-content">
+                            <div class="base-color contact-title">
+                            @*Địa chỉ công ty*@
+
+                                @Resources.Resource.diachicongty
+
+                                @*@if (Session["Diachicongty"] != null)
+                                {<div>@Session["Diachicongty"]</div>}
+                                else
+                                {<div>Địa chỉ công ty</div>}*@
+
+
+                            @*Office Location*@
+                            </div>
+                            @ViewBag.thongtincodinh_diachi
+                            @*2050 Bamako Place Washington, DC 20521-2050*@
+                        </div>
+                    </div>
+                    <div class="contact-address-item col-xs-12 col-sm-6" style="margin-bottom: 30px;">
+                        <span class="icon-wrap"><i class="fa fa-phone contact-icon"></i></span>
+                        <div class="text-content">
+                            <div class="base-color contact-title">
+                            @*Điện thoại liên lạc*@
+                                @Resources.Resource.dienthoailienlac
+
+                                @*@if (Session["Dienthoailienlac"] != null)
+                                {<div>@Session["Dienthoailienlac"]</div>}
+                                else
+                                {<div>Điện thoại liên lạc</div>}*@
+
+                            @*Contact Number*@
+                            </div>
+                            @ViewBag.thongtincodinh_dienthoai
+                            @*+1 2689254 - +1 2685987*@
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="contact-address-item col-xs-12 col-sm-6" style="margin-bottom: 30px;">
+                        <span class="icon-wrap"><i class="fa fa-envelope contact-icon"></i></span>
+                        <div class="text-content">
+                            <div class="base-color contact-title">
+                            Email
+                            @*Contact Mail*@
+                            </div>
+                            @ViewBag.thongtincodinh_mail
+                            @*support@thefund.com<br />
+                            help@thefund.com*@
+                        </div>
+                    </div>
+
+                    <div class="contact-address-item col-xs-12 col-sm-6">
+                        <span class="icon-wrap"><i class="fa fa-map-marker contact-icon"></i></span>
+                        <div class="text-content">
+                            <div class="base-color contact-title">
+                            Website
+                            </div>
+                            @ViewBag._website
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>

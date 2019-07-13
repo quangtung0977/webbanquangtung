@@ -1,0 +1,107 @@
+﻿@model WebApplication1.Areas.Admin.Models.banner
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>banner</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tenbanner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tenbanner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.urlbanner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.urlbanner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.motabanner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.motabanner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ghichu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ghichu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ngaytao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngaytao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ngaycapnhat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngaycapnhat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hienthi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hienthi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.thutuhien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.thutuhien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.daxoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.daxoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.admin_account.username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.admin_account.username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.loaibanner1.tenloaibanner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.loaibanner1.tenloaibanner)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

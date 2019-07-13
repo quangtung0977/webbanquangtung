@@ -1,0 +1,172 @@
+﻿@model WebApplication1.Areas.Admin.Models.admin_tintuc
+
+<link rel="stylesheet" type="text/css" href="~/css/newsDetail-style.css" />
+<section>
+    <ul class="menu">
+        <li><a href="#">Tin mới</a></li>
+        <li><a href="#">Sản phẩm mới</a></li>
+        <li><a href="#">Đánh giá</a></li>
+        <li><a href="#">Mẹo hay</a></li>
+        <li><a href="#">Thị trường</a></li>
+        <li><a href="#">Cuộc sống số</a></li>
+        <li><a href="#">Game - App</a></li>
+        <li><a href="#">Sự kiện</a></li>
+        <li><a href="#">Laptop</a></li>
+        <li><a href="#">Đồ chơi công nghệ</a></li>
+        <li><a href="#">E-Magazine</a><label class="menulabel ">Mới</label></li>
+    </ul>
+    <article>
+        <h1 class="titledetail">@Model.tentintuc</h1>
+
+        <div class="userdetail">
+            <span>@String.Format("{0:d/M/yyyy}", Model.ngaycapnhat)</span>
+
+
+        </div>
+        <div>
+            @Html.Raw(Model.noidungtintuc)
+        </div>
+        <form id="frmUnsatf" onsubmit="return SendFebck('#frmUnsatf')" class="hide" method="post" data-value="0">
+            <textarea name="txtContent" rows="3" placeholder="Mời bạn góp ý để chúng tôi phục vụ tốt hơn"></textarea>
+            <span>Hãy để lại thông tin để được hỗ trợ khi cần thiết (Không bắt buộc):</span>
+            <div>
+                <label onclick="changeSex(this)" data-sex="1" class="choosed"><i></i>Anh</label>
+                <label onclick="changeSex(this)" data-sex="2"><i></i>Chị</label>
+            </div>
+            <input type="text" name="txtFullName" placeholder="Họ tên">
+            <input type="text" name="txtPhoneNumber" placeholder="Số điện thoại">
+            <input type="text" name="txtEmail" placeholder="Email">
+            <input type="hidden" name="txtSex" value="1" />
+            <input type="hidden" name="txtNewsId" value="1158464" />
+            <button type="submit">Gửi góp ý<span>Cam kết bảo mật thông tin cá nhân</span></button>
+            <label class="alert" id="alert"></label>
+        </form>
+
+    </article>
+    <div class="bottom">
+        <div class="banner owl-ban">
+            <div>
+                <a href='#'><img style='cursor:pointer' src='http://via.placeholder.com/600x160' alt='Nokia quà bao la' width='600' height='160' /></a>
+            </div>
+        </div>
+
+
+        <h5 class="titlerelate">Bài viết liên quan</h5>
+        <ul class="newsrelate">
+            <li>
+                <a href="#" class="linkimg">
+                    <div class="tempvideo">
+                        <img width="100" src="http://via.placeholder.com/800x450">
+                    </div>
+                    <h3>
+                        Gi&#225;m đốc Xiaomi gửi lời ch&#250;c mừng Apple v&#224; Qualcomm t&#225;i hợp
+                        <span class="lesscom"><i class="iconnews-comcya"></i>9</span>
+                    </h3>
+                    <span class="timepost">15 giờ trước</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="linkimg">
+                    <div class="tempvideo">
+                        <img width="100" src="http://via.placeholder.com/800x450">
+                    </div>
+                    <h3>
+                        iPhone 11 sẽ c&#243; hiệu năng nhanh hơn hầu hết c&#225;c mẫu laptop mỏng nhẹ hiện nay?
+                        <span class="lesscom"><i class="iconnews-comcya"></i>18</span>
+                    </h3>
+                    <span class="timepost">1 ng&#224;y trước</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="linkimg">
+                    <div class="tempvideo">
+                        <img width="100" src="http://via.placeholder.com/800x450">
+                    </div>
+                    <h3>
+                        5 ứng dụng &amp; game hấp dẫn đang FREE cho iPhone, iPad (17/4)
+                    </h3>
+                    <span class="timepost">1 ng&#224;y trước</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="linkimg">
+                    <div class="tempvideo">
+                        <img width="100" src="http://via.placeholder.com/800x450">
+                    </div>
+                    <h3>
+                        2018, Apple chiếm gần 3/4 lợi nhuận ng&#224;nh c&#244;ng nghiệp smartphone
+                        <span class="lesscom"><i class="iconnews-comcya"></i>20</span>
+                    </h3>
+                    <span class="timepost">2 ng&#224;y trước</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="linkimg">
+                    <div class="tempvideo">
+                        <img width="100" src="http://via.placeholder.com/800x450">
+                    </div>
+                    <h3>
+                        5 ứng dụng &amp; game hấp dẫn đang FREE cho iPhone, iPad (16/4)
+                    </h3>
+                    <span class="timepost">2 ng&#224;y trước</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="linkimg">
+                    <div class="tempvideo">
+                        <img width="100" src="http://via.placeholder.com/800x450">
+                    </div>
+                    <h3>
+                        Top ứng dụng &amp; game hấp dẫn đang FREE cho iPhone, iPad (12/4)
+                    </h3>
+                    <span class="timepost">6 ng&#224;y trước</span>
+                </a>
+            </li>
+        </ul>
+
+
+
+    </div>
+    <ul class="menu mnfoo">
+        <li><a href="#">Tin mới</a></li>
+        <li><a href="#">Sản phẩm mới</a></li>
+        <li><a href="#">Đánh giá</a></li>
+        <li><a href="#">Mẹo hay</a></li>
+        <li><a href="#">Thị trường</a></li>
+        <li><a href="#">Cuộc sống số</a></li>
+    </ul>
+
+
+
+    <script type="application/ld+json">
+
+        {
+        "context": "http://schema.org",
+        "type": "BreadcrumbList",
+        "itemListElement": [
+        {
+        "type": "ListItem",
+        "position": 1,
+        "item": {
+        "id": "https://www.thegioididong.com",
+        "name": "Thế Giới Di Động"
+        }},
+        {
+        "type": "ListItem",
+        "position": 2,
+        "item": {
+        "id": "https://www.thegioididong.com/tin-tuc",
+        "name": "tin tức"
+        }},
+        {
+        "type": "ListItem",
+        "position": 3,
+        "item": {
+        "id": "https://www.thegioididong.com/tin-tuc/",
+        "name": "Tin nhanh 24/7"
+        }}
+        ]}
+    </script>
+</section>
+
+<script defer="defer" async="async" src="~/js/newsDetailScript.js"></script>

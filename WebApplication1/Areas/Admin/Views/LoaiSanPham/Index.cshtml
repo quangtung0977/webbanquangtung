@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Index</h2>
+
+@(Html.DevExtreme().DataGrid<WebApplication1.Areas.Admin.Models.loaisanpham>()
+        .DataSource(ds => ds.WebApi()
+            .RouteName("loaisanphamsApi")
+            .LoadAction("Get")
+            .InsertAction("Post")
+            .UpdateAction("Put")
+            .DeleteAction("Delete")
+            .Key("id")
+        )
+        .RemoteOperations(true)
+        .Columns(columns =>
+        {
+
+            columns.AddFor(m => m.id);
+
+            columns.AddFor(m => m.ten);
+
+            columns.AddFor(m => m.ngaytao);
+
+            columns.AddFor(m => m.ngaycapnhat);
+
+            columns.AddFor(m => m.nguoitao);
+
+            columns.AddFor(m => m.daxoa);
+
+            columns.AddFor(m => m.hinhanhloaisanpham);
+
+            columns.AddFor(m => m.motasoluoc);
+
+            columns.AddFor(m => m.ghichu);
+
+            columns.AddFor(m => m.hienthi);
+
+            columns.AddFor(m => m.thutuhien);
+        })
+        .Editing(e => e
+            .AllowAdding(true)
+            .AllowUpdating(true)
+            .AllowDeleting(true)
+        )
+)
+

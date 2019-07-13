@@ -1,0 +1,232 @@
+﻿@model IEnumerable<WebApplication1.Areas.Admin.Models.sanpham>
+
+<link rel="stylesheet" type="text/css" href="~/css/product-style.css" />
+<section class="laptopcate ">
+    <div class="clr"></div>
+    <div class="laptopmanu">
+        <a href="laptop-apple-macbook.html"><img src="https://via.placeholder.com/63x30" /></a>
+        <a href="laptop-apple-macbook.html"><img src="https://via.placeholder.com/63x30" /></a>
+        <a href="laptop-apple-macbook.html"><img src="https://via.placeholder.com/63x30" /></a>
+        <a href="laptop-apple-macbook.html"><img src="https://via.placeholder.com/63x30" /></a>
+        <a href="laptop-apple-macbook.html"><img src="https://via.placeholder.com/63x30" /></a>
+        <a href="laptop-apple-macbook.html"><img src="https://via.placeholder.com/63x30" /></a>
+        <a href="laptop-apple-macbook.html"><img src="https://via.placeholder.com/63x30" /></a>
+        <a href="laptop0229.html?g=hoc-tap-van-phong">Học tập văn phòng</a>
+        <a href="laptopa543.html?g=do-hoa-ky-thuat">Đồ họa - Kỹ thuật</a>
+        <a href="laptopf419.html?g=laptop-gaming">Laptop Gaming</a>
+        <a href="laptopba25.html?g=cao-cap-sang-trong">Cao cấp - Sang trọng</a>
+    </div>
+    <div class="laptopprice barpageLaptop">
+        <h1>Laptop nổi bật nhất</h1>
+        <div class="tagfilter">
+            Mức giá:
+            <a href="laptop002b.html?p=duoi-10-trieu">
+                Dưới 10 triệu
+            </a>
+            <a href="laptopfb86.html?p=10-15-trieu">
+                10 - 15 triệu
+            </a>
+            <a href="laptopa068.html?p=15-25-trieu">
+                15 - 25 triệu
+            </a>
+            <a href="laptop6e01.html?p=tren-25-trieu">
+                Tr&#234;n 25 triệu
+            </a>
+
+            <!--#region Sắp xếp-->
+            <span style="color:#eee; font-size:21px;">
+                &nbsp; | &nbsp;
+            </span>
+
+
+            <!--#endregion-->
+        </div>
+    </div>
+    <!-- Product -->
+
+    <ul class="homeproduct">
+
+        @foreach (var item in Model)
+        {
+   
+            <li>
+                <a href="@Url.Action("Detail", "Products", new { id=item.id })" class=laptop>
+                    <img width="180" height="180" data-original="@item.hinhdaidien" class="lazy"><div class="props">
+                    </div>
+                    <h3>@item.ten</h3>
+                    <div class="price">
+                        @{
+                            int giagiam = 0;
+                            if (item.gianiemyet > item.giaban)
+                            {
+                                giagiam = Convert.ToInt32(item.gianiemyet) - Convert.ToInt32(item.giaban);
+                                <strong>@string.Format("{0:n0}", item.giaban)₫</strong>
+                                <span>@string.Format("{0:n0}", item.gianiemyet)₫</span>
+                            }
+                            else
+                            {
+                                <strong>@string.Format("{0:n0}", item.giaban)₫</strong>
+                            }
+                        }
+                    </div>
+                    <div class="promo">
+                        <p>@item.ghichu</p>
+                    </div>
+                    @if (giagiam != 0)
+                    {
+                        <label class="discount">GIẢM @string.Format("{0:n0}", giagiam)₫</label>
+                    }
+                </a>
+            </li>
+        }
+    </ul>
+    @*<a href="javascript:More()" class="viewmore">Xem thêm 66 laptop</a>*@
+
+    <div class="laptopacc">
+        <h3>PHẦN MỀM - PHỤ KIỆN LAPTOP</h3>
+        <a href="phan-memfa7c.html?g=diet-virus">
+            <span>
+                <img class="lazy" data-original="../cdn.tgdd.vn/v2015/Content/desktop/images/laptop/diet-virus.jpg" />
+            </span>
+            <h4>Phần mềm diệt virus</h4>
+        </a>
+        <a href="phan-mem2fb4.html?g=microsoft-office">
+            <span>
+                <img class="lazy" data-original="../cdn.tgdd.vn/v2015/Content/desktop/images/laptop/office-365.jpg" />
+            </span>
+            <h4>Microsoft Office</h4>
+        </a>
+        <a href="phan-memf993.html?g=windows-10">
+            <span>
+                <img class="lazy" data-original="../cdn.tgdd.vn/v2015/Content/desktop/images/laptop/windows.jpg" />
+            </span>
+            <h4>Windows 10 bản quyền</h4>
+        </a>
+        <a href="chuot-may-tinh.html">
+            <span>
+                <img class="lazy" data-original="../cdn.tgdd.vn/v2015/Content/desktop/images/laptop/chuot-ban-phim.jpg" />
+            </span>
+            <h4>Chuột, bàn phím</h4>
+        </a>
+        <a href="usb.html">
+            <span>
+                <img class="lazy" data-original="../cdn.tgdd.vn/v2015/Content/desktop/images/laptop/usb.jpg" />
+            </span>
+            <h4>USB / Ổ cứng</h4>
+        </a>
+        <a href="tai-nghe.html">
+            <span>
+                <img class="lazy" data-original="../cdn.tgdd.vn/v2015/Content/desktop/images/laptop/tai-nghe.jpg" />
+            </span>
+            <h4>Tai nghe</h4>
+        </a>
+        <a href="loa-laptop.html">
+            <span>
+                <img class="lazy" data-original="../cdn.tgdd.vn/v2015/Content/desktop/images/laptop/loa.jpg" />
+            </span>
+            <h4>Loa</h4>
+        </a>
+        <a href="phu-kien5136.html?key=dan+laptop">
+            <span>
+                <img class="lazy" data-original="../cdn.tgdd.vn/v2015/Content/desktop/images/laptop/mieng-dan-laptop.jpg" />
+            </span>
+            <h4>Miếng dán laptop</h4>
+        </a>
+    </div>
+    <div class="laptopnews">
+        <h3>Góc tư vấn chọn mua laptop</h3>
+        <div class="left">
+            <iframe width="560" height="315" data-src="https://www.youtube.com/embed/videoseries?list=UU9MzamEEjU1EMMXO_m9ob3Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div class="right">
+            <ul class="newslist" id="mainlist">
+                <li>
+                    <a href="tin-tuc/lenovo-ideapad-530s-cau-hinh-cuc-tot-gia-ngon-nhieu-qua-chat-1161490.html">
+                        <div class="tempvideo">
+                            <img width="100" height="70" data-original="https://cdn.tgdd.vn/Files/2019/04/18/1161490/l1_800x450-300x200.jpg" class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==" />
+                        </div>
+                        <h3>
+                            Lenovo Ideapad 530S cấu h&#236;nh cực tốt core i7 SSD 256 GB, gi&#225; ngon, nhiều qu&#224; chất
+
+                        </h3>
+                        <figure>
+                            Bạn đang có nhu cầu sắm cho mình 1 chiếc laptop mỏng nhẹ với thiết kế đẹp, sang trọng nhưng cấu hình mạnh mẽ, thì Lenovo Ideapad 530S là một lựa...
+                        </figure>
+                        <div class="timepost">
+                            <span>7 giờ trước</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="tin-tuc/microsoft-game-dua-xe-forza-street-windows-10-sap-len-mobile-1161235.html">
+                        <div class="tempvideo">
+                            <img width="100" height="70" data-original="https://cdn.tgdd.vn/Files/2019/04/17/1161235/forza-street_800x450-300x200.jpg" class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==" />
+                        </div>
+                        <h3>
+                            Microsoft ph&#225;t h&#224;nh game đua xe Forza Street cho Windows 10, sắp l&#234;n mobile
+
+                        </h3>
+                        <figure>
+                            Forza Street là game đua xe miễn phí vừa được Microsoft phát hành cho nền tảng Windows 10, và game thủ có thể tải về thông qua chợ ứng dụng...
+                        </figure>
+                        <div class="timepost">
+                            <span>1 ng&#224;y trước</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="tin-tuc/ban-cap-nhat-macos-10-14-4-giup-man-hinh-macbook-air-2018-sang-hon-1161206.html">
+                        <div class="tempvideo">
+                            <img width="100" height="70" data-original="https://cdn.tgdd.vn/Files/2019/04/17/1161206/a1_800x450-300x200.jpg" class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==" />
+                        </div>
+                        <h3>
+                            Bản cập nhật macOS 10.14.4 gi&#250;p m&#224;n h&#236;nh MacBook Air 2018 s&#225;ng hơn
+
+                        </h3>
+                        <figure>
+                            MacBook Air mới nhất của Apple được giới thiệu vào năm 2018 với màn hình Retina có độ sáng 300 nits, tuy nhiên sau khi tung ra bản cập nhật macOS...
+                        </figure>
+                        <div class="timepost">
+                            <span>1 ng&#224;y trước</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="clr"></div>
+</section>
+<!-- Tag  -->
+
+<div class="catetag">
+    <div>
+        <a href="laptop002b.html?p=duoi-10-trieu">Dưới 10 triệu</a>
+        <a href="laptopfb86.html?p=10-15-trieu">10 - 15 triệu</a>
+        <a href="laptopa068.html?p=15-25-trieu">15 - 25 triệu</a>
+        <a href="laptop6e01.html?p=tren-25-trieu">Tr&#234;n 25 triệu</a>
+    </div>
+    <div>
+        <a href="laptop-macbook.html">Macbook</a>
+        <a href="laptop-hp-compaq.html">HP-Compaq</a>
+        <a href="laptop-asus.html">Asus</a>
+        <a href="laptop-dell.html">Dell</a>
+    </div>
+    <div>
+        <a href="laptop536e.html?f=man-hinh-gap-360-do">M&#224;n h&#236;nh gập 360 độ</a>
+        <a href="laptop564b.html?f=cpu-intel-the-he-8">CPU Intel thế hệ 8</a>
+        <a href="laptop2092.html?f=vien-man-hinh-mong">Viền m&#224;n h&#236;nh mỏng</a>
+        <a href="laptop08be.html?f=bo-nho-intel-optane">Bộ nhớ Intel Optane</a>
+    </div>
+</div>
+
+
+<div class="plc">
+    <ul>
+        <li><i class="icGh"></i><span>Giao h&#224;ng hoả tốc trong 90 ph&#250;t</span></li>
+        <li><i class="icTt"></i><span>Thanh toán linh hoạt: tiền mặt, visa / master, trả góp</span></li>
+        <li><i class="icTn"></i><span>Trải nghiệm sản phẩm tại nhà</span></li>
+        <li><i class="icLd"></i><span>Lỗi đổi tại nhà trong 1 ngày</span></li>
+        <li><i class="icHt"></i><span>Hỗ trợ suốt thời gian sử dụng. Hotline: <a href="tel:18001763">1800.1763</a></span></li>
+    </ul>
+</div>
+<script defer="defer" async="async" src="~/js/productScript.js"></script>

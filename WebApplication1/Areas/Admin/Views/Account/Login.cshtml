@@ -1,0 +1,34 @@
+﻿@model WebApplication1.Areas.Admin.Models.admin_account
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link type="text/css" href="~/Areas/Admin/Assets/css/adminStyle.css" rel="stylesheet">
+    <title>Login</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        <div class="LoginBackground">
+            <div class="login-page">
+                <div class="form">
+                    <form class="login-form">
+                        @Html.TextBoxFor(m => m.username, new { placeholder = "Username", onfocus = "this.placeholder = ''", onblur = "this.placeholder = 'Username'" })
+                        @Html.PasswordFor(m => m.password, new { placeholder = "Password", onfocus = "this.placeholder = ''", onblur = "this.placeholder = 'Password'" })
+                        @if (ViewBag.Message != "")
+                        {
+                            <p style="color:white;font-weight:bold">@ViewBag.Message</p>
+                        }
+                        <button type="submit">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    }
+</body>
+</html>

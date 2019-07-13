@@ -1,0 +1,85 @@
+﻿@model IEnumerable<WebApplication1.Areas.Admin.Models.banner>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tenbanner)
+        </th>
+        <th style="width:200px;">
+            @Html.DisplayNameFor(model => model.urlbanner)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.motabanner)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ghichu)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.ngaytao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ngaycapnhat)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.hienthi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.thutuhien)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.loaibanner1.tenloaibanner)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tenbanner)
+        </td>
+        <td style="width:200px;height:100px;">
+            @*@Html.DisplayFor(modelItem => item.urlbanner)*@
+            <div style="width:200px;height:100px">
+                <img width="200" height="100" src="~/UserUpload/images/Banner/banner  happylink 1920x940.jpg" />
+            </div>
+            @*@Html.Raw(item.urlbanner)*@
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.motabanner)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ghichu)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.ngaytao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ngaycapnhat)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.hienthi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.thutuhien)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.loaibanner1.tenloaibanner)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

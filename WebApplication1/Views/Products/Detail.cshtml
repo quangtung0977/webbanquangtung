@@ -1,0 +1,1440 @@
+﻿@model WebApplication1.Areas.Admin.Models.sanpham
+
+<link rel="stylesheet" type="text/css" href="~/css/detailProduct-style.css" />
+<section class="type0">
+    <ul class="breadcrumb"><li><a href="../index.html" title="Trang chủ">Trang chủ</a> <span>›</span></li><li><a href="../laptop.html">Laptop</a> <span>›</span></li><li class="brand"><a href="../laptop-hp-compaq.html">HP-Compaq</a></li></ul>
+    <div class="rowtop">
+        <h1>@Html.DisplayFor(model => model.ten)</h1>
+        <div class="ratingresult">
+            <span class="star"><i class="icontgdd-star"></i></span>
+            <span class="star"><i class="icontgdd-star"></i></span>
+            <span class="star"><i class="icontgdd-star"></i></span>
+            <span><i class="icontgdd-star"></i></span>
+            <span><i class="icontgdd-star"></i></span>
+            <a href="#danhgia">11 đánh giá</a>
+        </div>
+
+        <div class="likeshare">
+            <div id="fb-root"></div>
+            <div class="fb-like" data-href="/laptop/hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+        </div>
+    </div>
+    <div class="clr"></div>
+    <div class="rowdetail" id="normalproduct">
+        <aside class="picture">
+            <img src="../../cdn.tgdd.vn/Products/Images/44/195383/hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j-thumb-33397-600x600.jpg" alt="Laptop HP Pavilion 15 cs1009TU i5 8265U/4GB/1TB/Win10 (5JL43PA)" onclick="gotoGallery(-1,0);">
+
+
+            <div class="colorandpic">
+                <ul class="owl-carousel owl-theme tabscolor">
+                    <li onclick="gotoGallery(1,15)" class="item">
+                        <div>
+                            <img class="lapglrimg" src="../../cdn.tgdd.vn/Products/Images/44/195383/hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j-1-180x125.jpg">
+                        </div>
+                        V&#224;ng
+                    </li>
+
+                    <li onclick="gotoGallery(7,0)" class="item">
+                        <div>
+                            <i class="icontgdd-box"></i>
+                        </div>
+                        Mở hộp,<br />
+                        k.mãi
+                    </li>
+
+
+                    <li onclick="PopupGallery(5)" class="item">
+                        <div>
+                            <i class="icontgdd-360"></i>
+                        </div>
+                        Hình 360<br />
+                        độ
+                    </li>
+                </ul>
+
+                <div class="prev hide" onclick="slideFltNext(0)"><i class="icontgdd-prevthumd"></i></div>
+                <div class="next hide" onclick="slideFltNext(1)"><i class="icontgdd-nextthumd"></i></div>
+            </div>
+            <div class="wrap_rtglr hide">
+                <div class="pop">
+                    <div class="hdpop">Phản hồi không hài lòng bộ ảnh <a href="javascript:closeRtGlr();" class="closehd"><i class="iconcom-close"></i></a></div>
+                    <div class="ctpop">
+
+
+                        <div class="bifRtCt bRtGlr hide">
+                            <textarea name="txtContent" rows="3" placeholder="Mời bạn góp ý để chúng tôi phục vụ tốt hơn"></textarea>
+                            <span>Hãy để lại thông tin để được hỗ trợ khi cần thiết (Không bắt buộc):</span>
+                            <div class="ifRtGd" data-val="0">
+                                <label onclick="rtAtcChangeGder(1)" class="ifGdM"><i></i>Anh</label>
+                                <label onclick="rtAtcChangeGder(2)" class="ifGdFm"><i></i>Chị</label>
+                            </div>
+                            <input type="text" name="txtFullName" placeholder="Họ tên">
+                            <input type="text" name="txtPhoneNumber" placeholder="Số điện thoại">
+                            <input type="text" name="txtEmail" placeholder="Email">
+                            <button type="submit" onclick="sendRatingContent(3)">Gửi góp ý<span>Cam kết bảo mật thông tin cá nhân</span></button>
+                            <label class="alert"></label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="slide_FT"></div>
+        </aside>
+        <aside class="price_sale">
+            <div class="area_price">
+                @{ 
+                    string gia = Html.DisplayFor(model => model.giaban).ToString();
+ }
+                <strong>@gia ₫</strong>
+                <label class="installment">Trả góp 0%</label>
+                <span></span>
+            </div>
+
+            <div class="tsh"><span><a href="javascript:void(0)">NHẬN H&#192;NG TRONG 90 PH&#218;T</a></span></div>
+
+
+
+
+
+
+
+
+
+
+            <div class="area_promotion zero">
+                <strong data-count="4">Khuyến mãi</strong>
+                <div class="pro-img">
+                    <ul class="t4">
+                        <li class="notapply" data-date="4/30/2019 11:00:00 PM" data-g="Tặng" data-return="240000">
+                            <label>
+
+                                <img class="prmImg" src="../../cdn.tgdd.vn/Products/Images/54/70820/tai-nghe-chup-tai-kanen-ip-952-2-7-200x200.jpg" data-promoid="481336" data-prdid="70820" title="Click để xem hình lớn" />
+                                <h3>
+                                    <span>
+                                        Tai nghe chụp tai Kanen IP-2050
+                                        <label class='sao'>*</label>
+                                    </span>
+                                </h3>
+                            </label>
+                        </li>
+                        <li class="notapply" data-date="4/30/2019 11:00:00 PM" data-g="Tặng" data-return="160000">
+                            <label>
+
+                                <img class="prmImg" src="../../cdn.tgdd.vn/Products/Images/86/73125/chuot-khong-day-genius-nx-7010-ava-1-200x200.jpg" data-promoid="481335" data-prdid="73125" title="Click để xem hình lớn" />
+                                <h3>
+                                    <span>
+                                        Chuột không dây
+                                        <label class='sao'>*</label>
+                                    </span>
+                                </h3>
+                            </label>
+                        </li>
+                        <li class="" data-date="4/30/2019 11:00:00 PM" data-g="Tặng" data-return="100000">
+                            <label>
+
+                                <img class="prmImg" src="../../cdn.tgdd.vn/Products/Images/2102/86101/balo-laptop-hp-km-khuyen-mai-200x200.jpg" data-promoid="481333" data-prdid="86101" title="Click để xem hình lớn" />
+                                <h3>
+                                    <span>
+                                        Balo Laptop HP-Compaq
+
+                                    </span>
+                                </h3>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="infopr">
+                    <span class="pro489969 " data-g="WebNote" data-date="6/30/2019 10:30:00 PM" data-return="">
+                        Cơ hội trúng 60 xe máy vision trị giá đến 1.8 tỷ (áp dụng từ 01/04 đến 30/6) <a href="../tin-tuc/thang-4-2019-sam-ngay-laptop-tai-the-gioi-di-dong-nhan-qua-lien-tay-1156933.html"> Xem chi tiết</a>
+
+                    </span>
+                </div>
+                <div class="clr"></div>
+                <div class="not-repay">* Không áp dụng khi mua trả góp 0%</div>
+            </div>
+            <script>
+            function ChoosePromtion(groupid, index, t) {
+                $('.pro' + groupid).removeClass('active');
+                $(t).addClass('active');
+                var protxt = $(t).find(".dscp u").html();
+                $('.notechoose').html('Bạn chọn khuyến mãi: ' + protxt).show();
+                BuyChoose();
+            }
+
+            function BuyChoose() {
+                $('.buy_now').unbind("click");
+                if ($('.option-repay').hasClass('active')) {
+                    $('.buy_now').unbind("click");
+                    $('.buy_now').click(function () {
+                        window.location.href = $('.buy_ins').attr('href');
+                        return false;
+                    });
+                }
+                else {
+                    $('.buy_now').click(function () {
+                        var paraPromotion = '';
+                        $('.area_promotion .pro-chosse.active').each(function () {
+                            paraPromotion += $(this).attr('data-group') + ";" + $(this).attr('data-index') + "$";
+                        });
+                        var url = $(this).attr('href');
+                        if (paraPromotion != '') {
+                            url += '&promotion=' + paraPromotion
+                            $(this).attr('href', url);
+                        }
+                        if ($('.option-shiper').hasClass('active')) {
+                            url += '&IsTechSupportShiper=1';
+                            $(this).attr('href', url);
+                        }
+                    });
+                }
+
+            }
+            </script>
+            <div class="notechoose"></div>
+    
+
+            <div class="area_order">
+                <a href="@Url.Action("Purchase", "Cart")" class="buy_now" data-value="195383"><b>Mua ngay </b><span>Giao trong 90 ph&#250;t hoặc nhận tại siêu thị</span></a>
+                @using (Html.BeginForm("ThemGioHang", "Products"))
+                {
+                    <input type="hidden" name="idsp" value="@Model.id"/>
+                    <input type="submit" />
+                }
+            </div>
+            <div class="callorder">
+            </div>
+        </aside>
+        <div class="rightInfo">
+            <div class="checkexist">
+                <strong class="kthlbl" onclick="$('.layerstore').toggle()"><i class="iconshop-local"></i>Kiểm tra có hàng tại nơi bạn ở không? </strong>
+                <div class="layerstore">
+                    <div class="city">TP.Hồ Chí Minh</div>
+                    <div class="listcity">
+                        <div class="searchlocal">
+                            <form>
+                                <input name="txtPro" id="txtPro" type="text" placeholder="Nhập tỉnh, thành để tìm nhanh">
+                                <button type="button" class="submit"><i class="iconmobile-search"></i></button>
+                            </form>
+                        </div>
+                        <div class="scroll">
+                            <aside><a data-value='3'>TP.Hồ Chí Minh</a><a data-value='5'>Hà Nội</a><a data-value='9'>Đà Nẵng</a><a data-value='82'>An Giang</a><a data-value='102'>Bà Rịa - Vũng Tàu</a><a data-value='103'>Bắc Giang</a><a data-value='104'>Bắc Kạn</a><a data-value='105'>Bạc Liêu</a><a data-value='106'>Bắc Ninh</a><a data-value='107'>Bến Tre</a><a data-value='108'>Bình Định</a><a data-value='109'>Bình Dương</a><a data-value='110'>Bình Phước</a><a data-value='111'>Bình Thuận</a><a data-value='81'>Cà Mau</a><a data-value='7'>Cần Thơ</a><a data-value='112'>Cao Bằng</a><a data-value='6'>Đắk Lắk</a><a data-value='113'>Đắk Nông</a><a data-value='114'>Điện Biên</a><a data-value='8'>Đồng Nai</a><a data-value='115'>Đồng Tháp</a><a data-value='116'>Gia Lai</a><a data-value='117'>Hà Giang</a><a data-value='118'>Hà Nam</a><a data-value='120'>Hà Tĩnh</a><a data-value='121'>Hải Dương</a><a data-value='101'>Hải Phòng</a><a data-value='122'>Hậu Giang</a><a data-value='123'>Hòa Bình</a><a data-value='124'>Hưng Yên</a></aside><aside><a data-value='125'>Khánh Hòa</a><a data-value='126'>Kiên Giang</a><a data-value='127'>Kon Tum</a><a data-value='128'>Lai Châu</a><a data-value='129'>Lâm Đồng</a><a data-value='130'>Lạng Sơn</a><a data-value='131'>Lào Cai</a><a data-value='132'>Long An</a><a data-value='133'>Nam Định</a><a data-value='134'>Nghệ An</a><a data-value='135'>Ninh Bình</a><a data-value='136'>Ninh Thuận</a><a data-value='137'>Phú Thọ</a><a data-value='138'>Phú Yên</a><a data-value='139'>Quảng Bình</a><a data-value='140'>Quảng Nam</a><a data-value='141'>Quảng Ngãi</a><a data-value='142'>Quảng Ninh</a><a data-value='143'>Quảng Trị</a><a data-value='144'>Sóc Trăng</a><a data-value='145'>Sơn La</a><a data-value='146'>Tây Ninh</a><a data-value='147'>Thái Bình</a><a data-value='148'>Thái Nguyên</a><a data-value='149'>Thanh Hóa</a><a data-value='150'>Thừa Thiên Huế</a><a data-value='151'>Tiền Giang</a><a data-value='152'>Trà Vinh</a><a data-value='153'>Tuyên Quang</a><a data-value='154'>Vĩnh Long</a><a data-value='155'>Vĩnh Phúc</a><a data-value='156'>Yên Bái</a></aside>
+                        </div>
+                    </div>
+                    <div class="dist"><span>Chọn quận, huyện</span></div>
+                    <div class="listdist">
+                        <div class="searchlocal">
+                            <form>
+                                <input name="txtDis" id="txtDis" type="text" placeholder="Nhập quận, huyện để tìm nhanh">
+                                <button type="button" class="submit"><i class="iconmobile-search"></i></button>
+                            </form>
+                        </div>
+                        <div class="scroll">
+                            <aside><a data-value='16'>Quận 1</a><a data-value='17'>Quận 2</a><a data-value='18'>Quận 3</a><a data-value='19'>Quận 4</a><a data-value='20'>Quận 5</a><a data-value='21'>Quận 6</a><a data-value='22'>Quận 7</a><a data-value='23'>Quận 8</a><a data-value='24'>Quận 9</a><a data-value='25'>Quận 10</a><a data-value='26'>Quận 11</a><a data-value='27'>Quận 12</a></aside><aside><a data-value='30'>Quận Tân Bình</a><a data-value='33'>Quận Tân Phú</a><a data-value='52'>Quận Phú Nhuận</a><a data-value='29'>Quận Gò Vấp</a><a data-value='51'>Quận Bình Thạnh</a><a data-value='28'>Quận Thủ Đức</a><a data-value='31'>Quận Bình Tân</a><a data-value='32'>Huyện Hóc Môn</a><a data-value='34'>Huyện Củ Chi</a><a data-value='35'>Huyện Nhà Bè</a><a data-value='36'>Huyện Bình Chánh</a><a data-value='61'>Huyện Cần Giờ</a></aside>
+                        </div>
+                    </div>
+                    <div class="clr"></div>
+                    <div class="choosecolor">
+                        <span>Màu: V&#224;ng</span>
+                        <div class="listcolor ">
+                            <a class="choosed" data-value="0220042000738">
+                                <div>
+                                    <img width="30" height="30" data-original="//cdn.tgdd.vn/Products/Images/44/195383/hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j-1-180x125.jpg" class="lazy">
+                                </div>
+                                V&#224;ng
+                            </a>
+                        </div>
+                    </div>
+                    <div class="clr"></div>
+                    <div class="listmarket" style="display: none">
+                        <strong class="dsstlbl">Danh sách siêu thị</strong>
+                        <ul class="listst"></ul>
+                        <div class="clr"></div>
+                        <form method="get" action="https://www.thegioididong.com/them-vao-gio-hang" class="frm_store">
+                            <input id="ProvinceId" name="ProvinceId" type="hidden" value="3" />
+                            <input id="DistricId" name="DistricId" type="hidden" value="0" />
+                            <input id="ProductCode" name="ProductCode" type="hidden" value="0220042000738" />
+                            <input id="StoreId" name="StoreId" type="hidden" value="0" />
+                            <input id="ProductId" name="ProductId" type="hidden" value="195383" />
+                            <input id="StockStatus" name="StockStatus" type="hidden" value="" />
+                            <input id="IsStock" name="IsStock" type="hidden" value="true" />
+                            <button type="submit" class="none btn_store"></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="clr"></div>
+            </div>
+
+            <ul class="policy ">
+                <li class="inpr">
+                    <span>Trong hộp có: <a class="stdImg" href="javascript:void(0)" onclick="showGalleryPS(100,0);">D&#226;y nguồn,Adapter sạc,Th&#249;ng m&#225;y,S&#225;ch hướng dẫn <i class='icondetail-camera standkit' href='../../cdn.tgdd.vn/Products/Images/44/195383/Kit/hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j-bo-ban-hang-org.jpg'></i></a></span>
+                </li>
+                <li class="wrpr">
+                    <span>
+                        Bảo hành chính hãng 12 tháng.
+                        <a href="javascript:openPopWrt();">Xem chi tiết</a>
+                    </span>
+                </li>
+                <li>
+                    1 đổi 1 trong 1 tháng nếu lỗi, đổi sản phẩm tại nhà trong 1 ngày.
+
+                    <a href="../chinh-sach-bao-hanh-san-pham.html" target="_blank">Xem chi tiết</a>
+                </li>
+            </ul>
+
+
+
+
+            <div class="productOld">
+                <a class="viewold" target="_blank" href="../may-doi-tra/laptop/hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j51dc.html?pid=195383&amp;c=44">
+                    Xem HP Pavilion 15 cs1009TU i5 8265U/4GB/1TB/Win10 (5JL43PA) cũ
+                    <div>
+                        <span>Giá dưới: <strong>12.890.000₫</strong></span>
+                        <span>Bảo hành tới 11.5 th&#225;ng</span>
+                    </div>
+                </a>
+            </div>
+
+
+
+
+            <div class="wrap_wrtp hide">
+                <div class="pop">
+                    <div class="hdpop">CHÍNH SÁCH BẢO HÀNH, ĐỔI TRẢ <a href="javascript:closePopWrt();" class="closehd"><span>✖</span></a></div>
+                    <div class="ctW">
+                        <span class="tlt">BẢO HÀNH CHÍNH HÃNG:</span>
+                        <span>Thân máy 12 tháng, pin 12 th&#225;ng, sạc 12 th&#225;ng - <a class="pWarr" target="_blank" href="../bao-hanh/hp-compaq.html">Xem điểm bảo hành HP-Compaq</a></span>
+
+                        <div class="cs">
+                            <div><strong><span style="font-size:14px;">CHÍNH SÁCH ĐỔI TRẢ:</span></strong></div>
+
+                            <table border="1" cellpadding="0" cellspacing="0" style="width:695px;" width="696">
+                                <tbody>
+                                    <tr>
+                                        <td style="width:102px;"> </td>
+                                        <td style="width: 282px; text-align: center;"><strong>THÁNG 1</strong></td>
+                                        <td style="width: 312px; text-align: center;"><strong>THÁNG 2 - 12</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:102px;height:130px;">
+                                            <strong>
+                                                SẢN PHẨM<br />
+                                                LỖI DO NHÀ<br />
+                                                SẢN XUẤT
+                                            </strong>
+                                        </td>
+                                        <td style="width:282px;height:130px;">
+                                            <strong>ĐỔI SẢN PHẨM HOẶC HOÀN TIỀN:</strong><br />
+                                            -1 đổi 1 hoặc đổi sản phẩm khác trong trường hợp hết hàng<br />
+                                            -Hoặc hoàn tiền mất phí 20%<br />
+                                        </td>
+                                        <td style="width:312px;height:130px;">
+                                            <strong>GỬI BẢO HÀNH:</strong><br />
+                                            -Hỗ trợ sản phẩm dùng trong thời gian chờ bảo hành (giá trị thấp hơn)<br />
+                                            Hoặc hoàn tiền mất phí, thêm 5%/tháng so với tháng thứ 1 (20%)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:102px;height:61px;">
+                                            <strong>
+                                                SẢN PHẨM<br />
+                                                KHÔNG LỖI
+                                            </strong>
+                                        </td>
+                                        <td style="width:282px;height:61px;">Hoàn tiền mất phí 20%</td>
+                                        <td style="width:312px;height:61px;">Hoàn tiền mất phí, thêm 5%/tháng so với tháng thứ 1 (20%)</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:102px;height:65px;">
+                                            <strong>
+                                                SẢN PHẨM<br />
+                                                LỖI DO<br />
+                                                NGƯỜI DÙNG
+                                            </strong>
+                                        </td>
+                                        <td colspan="2" style="width:595px;height:65px;"><strong>KHÔNG BẢO HÀNH, ĐỔI TRẢ.</strong> Thegioididong.com hỗ trợ chuyển TTBH hãng, khách hàng chịu phí sửa chữa.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <a class="xct" href="../chinh-sach-bao-hanh-san-pham.html">XEM CHI TIẾT</a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="clr"></div>
+    <input type="hidden" id="hdgamecombo" value="true" />
+    <div class="gamecombo">
+        <h2 class="h2game">Ưu đãi khi mua Phụ Kiện cùng HP Pavilion 15 cs1009TU i5 8265U/4GB/1TB/Win10 (5JL43PA)</h2>
+        <ul class="n6 list" data-list="[110670,88942,103908,79629,195377,103907,59907,79630,151412,86801,49140,151027,151410,151409,89684,74786,88045,73125,69047,74784,195376,82333,71754,61275,148652,134808,70944,83124,197794,199956,197365,197368,197366,92416,142235,72775,74185,86504,82701,74183,69514,69513,70820,68924,74879,187802,89064]">
+            <li>
+                <div>
+                    <img data-original="https://cdn.tgdd.vn/Products/Images/44/195383/hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j-thumb-33397-200x200.jpg" class="lazy" width="100" height="100" />
+                    <div class="info first">
+                        <h3 class="active" data-i="195383" data-p="15390000" data-h="15390000">HP Pavilion 15 cs1009TU i5 8265U/4GB/1TB/Win10 (5JL43PA)</h3>
+                        <strong>15.390.000₫</strong>
+                        <span class="line"></span>
+                    </div>
+                </div>
+            </li>
+            <li id="catcb86">
+                <div class="augment"></div>
+                <div>
+                    <a href="../chuot-may-tinh/chuot-co-day-genius-dx-125-den.html" target="_blank">
+                        <img data-original="https://cdn.tgdd.vn/Products/Images/86/74784/chuot-co-day-genius-dx-125-den-ava-200x200.jpg" class="lazy" width="100" height="100" />
+                    </a>
+                    <div class="info">
+                        <h3 class="active" onclick="CheckItemCombo(this)" data-i="74784" data-c="1" data-p="80000" data-h="100000"><i class="iconmobile-uncheck"></i>Chuột c&#243; d&#226;y Genius DX-125 Đen</h3>
+                        <strong>80.000₫</strong>
+                        <span class="line">100.000₫</span>
+                        <span>(-20%)</span>
+                        <a href="javascript:void(0)" onclick="showmorecombo(86, 74784, 195383, 'chuột m&#225;y t&#237;nh')" class="compdetail">Chọn chuột m&#225;y t&#237;nh kh&#225;c </a>
+                    </div>
+                </div>
+            </li>
+            <li id="catcb75">
+                <div class="augment"></div>
+                <div>
+                    <a href="../usb/usb-sandisk-sdcz50-8gb-20-xanh-duong.html" target="_blank">
+                        <img data-original="https://cdn.tgdd.vn/Products/Images/75/83124/usb-sandisk-sdcz50-8gb-20-xanh-duong-1-5-200x200.jpg" class="lazy" width="100" height="100" />
+                    </a>
+                    <div class="info">
+                        <h3 class="active" onclick="CheckItemCombo(this)" data-i="83124" data-c="1" data-p="120000" data-h="150000"><i class="iconmobile-uncheck"></i>USB 2.0 8 GB Sandisk SDCZ50</h3>
+                        <strong>120.000₫</strong>
+                        <span class="line">150.000₫</span>
+                        <span>(-20%)</span>
+                        <a href="javascript:void(0)" onclick="showmorecombo(75, 83124, 195383, 'usb, ổ cứng')" class="compdetail">Chọn usb, ổ cứng kh&#225;c </a>
+                    </div>
+                </div>
+            </li>
+            <li id="catcb54">
+                <div class="augment"></div>
+                <div>
+                    <a href="../tai-nghe/tai-nghe-ep-awei-q7ni.html" target="_blank">
+                        <img data-original="https://cdn.tgdd.vn/Products/Images/54/69514/tai-nghe-ep-awei-q7ni-1-2-200x200.jpg" class="lazy" width="100" height="100" />
+                    </a>
+                    <div class="info">
+                        <h3 class="active" onclick="CheckItemCombo(this)" data-i="69514" data-c="1" data-p="105000" data-h="150000"><i class="iconmobile-uncheck"></i>Tai nghe nh&#233;t trong Awei Q7Ni</h3>
+                        <strong>105.000₫</strong>
+                        <span class="line">150.000₫</span>
+                        <span>(-30%)</span>
+                        <a href="javascript:void(0)" onclick="showmorecombo(54, 69514, 195383, 'tai nghe')" class="compdetail">Chọn tai nghe kh&#225;c </a>
+                    </div>
+                </div>
+            </li>
+            <li id="catcb2429">
+                <div class="augment"></div>
+                <div>
+                    <a href="../phu-kien-khac/tui-chong-soc-laptop-15-wiwu-bo-goc.html" target="_blank">
+                        <img data-original="https://cdn.tgdd.vn/Products/Images/2429/199956/tui-chong-soc-laptop-15-wiwu-bo-goc-avatar-1-200x200.jpg" class="lazy" width="100" height="100" />
+                    </a>
+                    <div class="info">
+                        <h3 class="active" onclick="CheckItemCombo(this)" data-i="199956" data-c="1" data-p="280000" data-h="350000"><i class="iconmobile-uncheck"></i>T&#250;i chống sốc Laptop 15 WIWU bo g&#243;c</h3>
+                        <strong>280.000₫</strong>
+                        <span class="line">350.000₫</span>
+                        <span>(-20%)</span>
+                        <a href="javascript:void(0)" onclick="showmorecombo(2429, 199956, 195383, 'phụ kiện kh&#225;c')" class="compdetail">Chọn phụ kiện kh&#225;c </a>
+                    </div>
+                </div>
+            </li>
+            <li class="tt">
+                <div class="bb">
+                    <label>Tổng tiền:</label>
+                    <div class="area_price">
+                        <strong>15.975.000₫</strong>
+                        <strong class="line">16.140.000₫</strong>
+                    </div>
+                </div>
+                <a href="../gio-hangc227.html?ProductId=195383&amp;game=combo" class="buy_now" onclick="addCart(this)" data-value="195383">
+                    <b>Mua 5 sản phẩm </b>
+                    <span>Tiết kiệm 165.000₫</span>
+                </a>
+            </li>
+        </ul>
+        <div class="wrapcp hide">
+            <div class="wrapPop">
+                <div class="titlebar">
+                    <b>Chọn mua phụ kiện khác</b>
+                    <a href="javascript:closepopupcombo();" class="back"><i class="icontgdd-closefilter iconmobile-closefil"></i></a>
+                </div>
+                <div class="ct">
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        #hdgamecombo[value=true] ~ .box_content {
+            border: none;
+        }
+
+        .h2game {
+            display: block;
+            line-height: 1.3em;
+            font-size: 20px;
+            color: #333;
+            margin: 20px 0 10px 0;
+        }
+
+        .gamecombo ul {
+            display: block;
+            overflow: hidden;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+            padding: 10px;
+        }
+
+            .gamecombo ul.n6 li {
+                float: left;
+                overflow: hidden;
+                width: 16%;
+            }
+
+                .gamecombo ul.n6 li.tt {
+                    padding: 20px;
+                }
+
+            .gamecombo ul.n5 li {
+                float: left;
+                overflow: hidden;
+                width: 20%;
+            }
+
+            .gamecombo ul.n4 li {
+                float: left;
+                overflow: hidden;
+                width: 25%;
+            }
+
+            .gamecombo ul.n3 li {
+                float: left;
+                overflow: hidden;
+                width: 23%;
+                padding: 0 5%;
+            }
+
+        .gamecombo li {
+            float: left;
+            overflow: hidden;
+            width: 25%;
+        }
+
+            .gamecombo li a {
+                display: block;
+                overflow: hidden;
+                color: #288ad6;
+                text-align: center;
+            }
+
+                .gamecombo li a.botbtn {
+                    display: none;
+                }
+
+            .gamecombo li div {
+                display: block;
+                overflow: hidden;
+                color: #288ad6;
+                text-align: center;
+            }
+
+                .gamecombo li div.info {
+                    text-align: left;
+                    padding: 0 5px;
+                }
+
+                    .gamecombo li div.info a {
+                        text-align: left;
+                    }
+
+                .gamecombo li div.first {
+                    padding-left: 60px;
+                }
+
+        .gamecombo .list li .augment {
+            background: #fff;
+            width: 18px;
+            height: 18px;
+            position: relative;
+            float: left;
+            margin-top: 50px;
+            display: inline-block !important;
+            cursor: pointer;
+        }
+
+            .gamecombo .list li .augment:before {
+                content: '';
+                width: 18px;
+                height: 4px;
+                background: #BFBFBF;
+                display: block;
+                margin: 7px auto;
+            }
+
+            .gamecombo .list li .augment:after {
+                content: '';
+                width: 4px;
+                height: 18px;
+                background: #BFBFBF;
+                display: block;
+                margin: 0px auto;
+                position: absolute;
+                top: 0px;
+                left: 0;
+                right: 0;
+            }
+
+        .gamecombo li div img {
+            width: auto;
+            height: 100px;
+        }
+
+        .gamecombo li h3 {
+            color: #333;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            padding-top: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .gamecombo li strong {
+            display: inline-block;
+            color: #d0021b;
+            padding: 10px 0 10px 0;
+        }
+
+        .gamecombo li span {
+            color: #666;
+            font-size: 12px;
+            padding: 10px 0 10px 0;
+        }
+
+            .gamecombo li span.line {
+                text-decoration: line-through;
+            }
+
+        .gamecombo .bb {
+            margin-top: 30px;
+            text-align: left;
+        }
+
+            .gamecombo .bb label {
+                font-size: 16px;
+            }
+
+        .gamecombo .buy_now {
+            display: block;
+            overflow: hidden;
+            padding: 7px 0;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+            font-size: 16px;
+            line-height: normal;
+            text-transform: uppercase;
+            color: #fff;
+            text-align: center;
+            background: #fd6e1d;
+            background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fd6e1d), to(#f59000));
+            background: -webkit-linear-gradient(top, #f59000, #fd6e1d);
+            background: -moz-linear-gradient(top, #f59000, #fd6e1d);
+            background: -ms-linear-gradient(top, #f59000, #fd6e1d);
+            background: -o-linear-gradient(top, #f59000, #fd6e1d);
+        }
+
+            .gamecombo .buy_now span {
+                display: block;
+                font-size: 13px;
+                color: #fff;
+                text-transform: none;
+                padding: 3px 0;
+            }
+
+        .gamecombo li .area_price {
+            padding: 0;
+            text-align: left;
+        }
+
+            .gamecombo li .area_price strong {
+                display: inline-block;
+                font-size: 20px;
+                padding: 0;
+                margin: 10px 0;
+            }
+
+                .gamecombo li .area_price strong.line {
+                    display: inline-block;
+                    vertical-align: middle;
+                    font-size: 16px;
+                    color: #999;
+                    text-decoration: line-through;
+                    margin: 0;
+                }
+
+        #popup {
+            width: 900px;
+            position: relative;
+            background-color: #fff;
+        }
+
+            #popup b {
+                padding: 10px;
+                display: block;
+            }
+
+        a.cls.back {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+            z-index: 999;
+        }
+
+        #popup .content {
+            position: relative;
+            overflow: hidden;
+            padding: 0px 15px;
+            max-height: 700px;
+        }
+
+        .gamecombo .wrapcp {
+            overflow: hidden;
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 100vh;
+            background: rgba(0, 0, 0, .5);
+            z-index: 9;
+        }
+
+            .gamecombo .wrapcp .wrapPop .titlebar b {
+                font-size: 20px;
+                padding: 10px 20px;
+                display: block;
+                text-align: left;
+                background-color: #fff;
+                color: #000;
+                margin: 0px;
+            }
+
+            .gamecombo .wrapcp .wrapPop .titlebar .back {
+                position: absolute;
+                right: 10px;
+                top: 10px;
+            }
+
+                .gamecombo .wrapcp .wrapPop .titlebar .back:before {
+                    display: none;
+                }
+
+            .gamecombo .wrapcp .wrapPop {
+                display: block;
+                overflow: auto;
+                position: relative;
+                width: 100%;
+                max-width: 900px;
+                height: auto;
+                max-height: 600px;
+                margin: auto;
+                background: #fff;
+                -moz-border-radius: 5px;
+                -webkit-border-radius: 5px;
+                border-radius: 5px;
+            }
+
+                .gamecombo .wrapcp .wrapPop .ct {
+                    padding: 0 20px;
+                }
+
+        .icontgdd-closefilter {
+            background-position: -205px -30px;
+            width: 18px;
+            height: 18px;
+        }
+
+        .scroll {
+            overflow: hidden;
+            overflow-y: scroll !important;
+            -webkit-overflow-scrolling: touch;
+            -ms-scroll-chaining: chained;
+        }
+    </style>
+    <script>
+                function CheckItemCombo(t) {
+                    if ($(t).hasClass('active'))
+                        $(t).removeClass('active');
+                    else
+                        $(t).addClass('active');
+                    UpdateTotalPriceCombo();
+                }
+
+                function UpdateTotalPriceCombo() {
+                    var totalItem = 0;
+                    var totalmoney = 0;
+                    var totalhismoney = 0;
+                    $('.gamecombo .list li h3.active').each(function () {
+                        totalmoney += parseInt($(this).attr('data-p'), 10);
+                        totalhismoney += parseInt($(this).attr('data-h'), 10);
+                        totalItem += 1;
+                    })
+                    $('.tt .bb .area_price strong').html(formatNumberValue(totalmoney) + 'đ');
+                    $('.tt .bb .area_price strong.line').html(formatNumberValue(totalhismoney) + 'đ');
+                    $('.tt .buy_now span').html('Tiết kiệm ' + formatNumberValue(totalhismoney - totalmoney) + 'đ');
+                    $('.tt .buy_now b').html('Mua ' + totalItem + ' sản phẩm');
+                }
+
+                function formatNumberValue(number) {
+                    var intLength = number.toString().length;
+                    var intLeft = 0;
+                    var strNumber = '';
+                    var strNewNumber = '';
+                    while (intLength % 3 != 0) {
+                        intLength++;
+                        intLeft++;
+                    }
+                    if (intLeft != 0) {
+                        for (var intCount = 0; intCount < intLeft; intCount++) {
+                            strNumber += '0';
+                        }
+                    }
+                    strNumber += number.toString();
+                    for (var intCount = 0; intCount < intLength; intCount++) {
+                        strNewNumber += strNumber.charAt(intCount);
+
+                        if (intCount > 0 && (intCount + 1) % 3 == 0 && intCount != intLength - 1) {
+                            strNewNumber += '.';
+                        }
+                    }
+                    strNewNumber = strNewNumber.substring(intLeft);
+                    return strNewNumber;
+                }
+
+                var fl_showmorecombo = false;
+
+                function showmorecombo(cateId, currId, proId, catname) {
+                    if (fl_showmorecombo) return false;
+                    fl_showmorecombo = !fl_showmorecombo;
+                    if (typeof $.colorbox == "undefined") {
+                        $.getScript("../Scripts/common/jquery.colorbox-min.js")
+                            .done(function (script, textStatus) {
+                                fl_showmorecombo = !fl_showmorecombo;
+                                showmorecombo(cateId, currId, proId, catname);
+                            });
+                        return false;
+                    }
+
+                    POSTAjax("/aj/orderv4/GetMoreCombo", { productId: proId, currId: currId, cateId: cateId }, BeforeSendAjax,
+                        function (result) {
+                            fl_showmorecombo = !fl_showmorecombo;
+                            AddColorBox('#popup', '#lpopup', result);
+                            $('#popup .h').html('Chọn mua ' + catname + ' khác');
+                            EndSendAjax();
+                        }, ErrorAjax, true);
+
+                }
+
+                function AddColorBox(idResult, objectId, ajaxResult) {
+                    if (typeof (ajaxResult) == 'object') {
+                        if (ajaxResult.status == -1) {
+                            alert(ajaxResult.error);
+                        }
+                    } else {
+                        if (ajaxResult == null || ajaxResult == '') return;
+                        if ($(idResult).length == 0) {
+                            $('body').addClass('hidden').append(ajaxResult);
+                            //$('section, footer').addClass('fixbody');
+                            $(objectId).colorbox({
+                                inline: true, closeButton: false, maxHeight: '98%', fixed: true,
+                                onClosed: function () {
+                                    $(idResult).remove();
+                                    $('body').removeClass('hidden');
+                                    $('section, footer').removeClass('fixbody');
+                                }
+                            });
+                            $(objectId).trigger('click').remove();
+                        } else {
+                            $(idResult).replaceWith(ajaxResult);
+                            $.colorbox.resize({ width: $(idResult).width() + 'px' });
+                            $(objectId).remove();
+                        }
+                        //$(window).on('resize', function () {
+                        //    $.colorbox.resize({ width: $(idResult).width() + 'px' });
+                        //});
+                    }
+                }
+
+                function ChangeCombo(id, catid) {
+                    $('#catcb' + catid).html($('#pop' + id).html());
+                    UpdateTotalPriceCombo();
+                    $.colorbox.close();
+                }
+
+                function addCart(t) {
+                    var url = $(t).attr('href');
+                    var combo = "&combo=";
+                    $('.gamecombo .list li h3.active').each(function () {
+                        combo += $(this).attr('data-i') + ',';
+                    })
+                    url += combo;
+                    $(t).attr('href', url);
+                    return false;
+                }
+
+    </script>
+    <div class="clr"></div>
+    <div class="box_content">
+        <aside class="left_content">
+
+            <div class="characteristics">
+                <h2>Đặc điểm nổi bật của HP Pavilion 15 cs1009TU i5 8265U/4GB/1TB/Win10 (5JL43PA)</h2>
+
+                <!-- slider -->
+                <div id="owl-detail" class="owl-carousel owl-detail">
+                    <div class="item">
+                        <img class="lazyOwl" data-src="https://cdn.tgdd.vn/Products/Images/44/195383/Slider/-sau.jpg" />
+                    </div>
+                    <div class="item">
+                        <img class="lazyOwl" data-src="https://cdn.tgdd.vn/Products/Images/44/195383/Slider/vi-vn-hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j-33397-slider-manhinh.jpg" />
+                    </div>
+                    <div class="item">
+                        <img class="lazyOwl" data-src="https://cdn.tgdd.vn/Products/Images/44/195383/Slider/vi-vn-hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j-33397-slider-cauhinh.jpg" />
+                    </div>
+                    <div class="item">
+                        <img class="lazyOwl" data-src="https://cdn.tgdd.vn/Products/Images/44/195383/Slider/-hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j-33397-silder.jpg" />
+                    </div>
+                    <div class="item">
+                        <img class="lazyOwl" data-src="https://cdn.tgdd.vn/Products/Images/44/195383/Slider/vi-vn-hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j-33397-slider-amthanh.jpg" />
+                    </div>
+                    <div class="item">
+                        <img class="lazyOwl" data-src="https://cdn.tgdd.vn/Products/Images/44/195383/Slider/vi-vn-hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j-33397-slider-congketnoi.jpg" />
+                    </div>
+                    <div class="item">
+                        <img alt="Bộ sản phẩm chuẩn" data-src="//cdn.tgdd.vn/Products/Images/44/195383/Kit/hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j-bo-ban-hang-org.jpg" class="lazyOwl" />
+                        <div class="des">
+                            <p>Bộ sản phẩm chuẩn: D&#226;y nguồn,Adapter sạc,Th&#249;ng m&#225;y,S&#225;ch hướng dẫn</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="boxArticle">
+
+
+                <article class="area_article">
+                    <h2><a href="hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j.html" target="_blank" title="Laptop HP Pavilion 15 cs1009TU (5JL43PA) chính hãng đang được kinh doanh tại Thegioididong.com">Laptop HP Pavilion 15 cs1009TU (5JL43PA)</a> vừa được ra mắt, nhằm mang đến cho sinh viên, nhân viên văn phòng có thêm sự lựa chọn tốt. Vẻ ngoài được thiết kế hiện đại, mỏng nhẹ phù hợp di chuyển hằng ngày đến công ty. Cấu hình máy chạy tốt các ứng dụng văn phòng, đồ hoạ cơ bản.</h2><p> </p><h3>Thiết kế tinh tế, thuận tiện di chuyển hằng ngày</h3><p>Được hoàn thiện từ chất liệu nhựa, nắp lưng kim loại làm tăng sự sang trọng trong thiết kế. Khớp nối màn hình và thân máy nhô lên khi mở rộng góc màn hình vừa là điểm cộng cho tổng thể thiết kế hiện đại, vừa có công dụng là điểm nổi giúp bạn đánh máy thuận tiện nhất. Là một chiếc <a href="../laptop0229.html?g=hoc-tap-van-phong" target="_blank" title="Laptop văn phòng chính hãng đang được kinh doanh tại Thegioididong.com">laptop văn phòng</a> nên trọng lượng máy khá nhẹ chỉ 1.8 kg phù hợp để bạn mang theo bên mình mọi lúc mọi nơi.</p><p><a class="preventdefault" href="../images/44/195383/hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j-33397-content-thietketgdd.jpg" onclick="return false;"><img alt="Thiết kết hài hoà trên laptop văn phòng HP Pavilion 15 cs1009TU i5 (5JL43PA)" data-original="https://cdn.tgdd.vn/Products/Images/44/195383/hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j-33397-content-thietketgdd.jpg" class='lazy' data-original="https://cdn.tgdd.vn/Products/Images/44/195383/hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j-33397-content-thietketgdd.jpg" title="Thiết kết hài hoà trên laptop văn phòng HP Pavilion 15 cs1009TU i5 (5JL43PA)"></a></p><h3>Màn hình to, rõ xem phim chất lượng cao</h3><p>Kích thước <a href="../laptop0af0.html?g=tren-15" target="_blank" title="Laptop chính hãng màn hình 15.6 inch đang kinh doanh tại Thegioididong.com">màn hình 15.6 inch</a> độ phân giải Full HD (1920 x 1080), kết hợp cùng công nghệ <a href="../tin-tuc/cac-cong-nghe-hien-thi-tren-man-hinh-laptop-597377.html#ledbacklit" target="_blank" title="Công nghệ LED Blacklit là gì? | Thegioididong.com">LED Blacklit</a> giúp bạn xem những bộ phim HD chất lượng cao, sắc nét đến từng chi tiết nhỏ.</p><p><a class="preventdefault" href="../images/44/195383/hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j-33397-content-manhinhtgdd.jpg" onclick="return false;"><img alt="Màn hình sắc nét trên laptop văn phòng HP Pavilion 15 cs1009TU i5 (5JL43PA)" data-original="https://cdn.tgdd.vn/Products/Images/44/195383/hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j-33397-content-manhinhtgdd.jpg" class='lazy' data-original="https://cdn.tgdd.vn/Products/Images/44/195383/hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j-33397-content-manhinhtgdd.jpg" title="Màn hình sắc nét trên laptop văn phòng HP Pavilion 15 cs1009TU i5 (5JL43PA)"></a></p><h3>Xử lý đồ hoạ cơ bản</h3><p><a href="../laptop.html" target="_blank" title="Laptop chính hãng đang kinh doanht ại Thegioididong.com">Laptop</a> HP Pavilion 15 cs1009TU (5JL43PA) được trang bị chip xử lý <a href="../laptopc128.html?g=core-i5" target="_blank" title="Laptop chính hãng trang bị chip xử lý core i5 đang được kinh doanh tại Thegioididong.com">core i5 </a>thế hệ 8, <a href="../laptop394e.html?g=4-gb" target="_blank" title="Laptop chính hãng trang bị 4GB RAM đang kinh doanh tại Thegioididong.com">4GB RAM DDR4</a> chạy mượt các ứng dụng văn phòng như word, excel, powerpoint,... Cho phản hồi các thao tác kéo thả trong photoshop, Pr,... nhanh chóng.</p><p><a href="../hoi-dap/tim-hieu-ve-cac-chuan-toc-do-cua-o-cung-ssd-tren-1115453.html" target="_blank" title="Tìm hiểu về các chuẩn tốc độ của ổ cứng SSD trên laptop cùng Thegioididong.com">Hỗ trợ khe cắm SSD M.2 PCIe</a> giúp bạn có thể nâng cấp <a href="../laptop8eff.html?f=o-cung-ssd" target="_blank" title="Laptop chính hãng được trang bị ổ cứng SSD đang được kinh doanh tại Thegioididong.com">ổ cứng SSD</a> giúp bạn khởi động máy, vào ứng dụng nhanh hơn ổ HDD truyền thống.</p><p><a class="preventdefault" href="../images/44/195383/hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j-33397-content-cauhinhtgdd.jpg" onclick="return false;"><img alt="Cấu hình mạnh mẽ trên laptop văn phòng HP Pavilion 15 cs1009TU i5 (5JL43PA)" data-original="https://cdn.tgdd.vn/Products/Images/44/195383/hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j-33397-content-cauhinhtgdd.jpg" class='lazy' data-original="https://cdn.tgdd.vn/Products/Images/44/195383/hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j-33397-content-cauhinhtgdd.jpg" title="Cấu hình mạnh mẽ trên laptop văn phòng HP Pavilion 15 cs1009TU i5 (5JL43PA)"></a></p><h3>Nghe nhạc chất lượng cao</h3><p><a href="../tin-tuc/cong-nghe-am-thanh-tren-laptop-598521.html" target="_blank" title="Tìm hiểu công nghệ âm thanh trên laptop cùng Thegioididong.com">Realtek High Definition Audio</a> - Công nghệ âm thanh quen thuộc trên các dòng <a href="../laptop-hp-compaq.html" target="_top" title="Laptop HP chính hãng đang được kinh doanh tại Thegioididong.com">laptop HP</a>. Cải thiện âm treble giúp âm thanh trong trẻo, những bài nhạc EDM sẽ có độ vang hơn.</p><p><a class="preventdefault" href="../images/44/195383/hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j-33397-content-amthanh.jpg" onclick="return false;"><img alt="Âm thanh to rõ trên laptop văn phòng HP Pavilion 15 cs1009TU i5 (5JL43PA)" data-original="https://cdn.tgdd.vn/Products/Images/44/195383/hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j-33397-content-amthanh.jpg" class='lazy' data-original="https://cdn.tgdd.vn/Products/Images/44/195383/hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j-33397-content-amthanh.jpg" title="Âm thanh to rõ trên laptop văn phòng HP Pavilion 15 cs1009TU i5 (5JL43PA)"></a></p><h3>USB 3.1 và USB Type C truyền dữ liệu nhanh chóng</h3><p>Bên cạnh các cổng kết nối cơ bản như HDMI, LAN,... Máy còn được trang bị 2 cổng <a href="../hoi-dap/usb-31-la-gi-926746.html" target="_blank" title="USB 3.1 là gì? | thegioididong.com">USB 3.1</a> và 1 cổng <a href="../hoi-dap/usb-typec-chuan-muc-cong-ket-noi-moi-723760.html" target="_blank" title="USB Type là gì? | thegioididong.com">USB Type C</a> giúp bạn truyền các file nặng. Tốc độ tối đa mà cổng này hỗ trợ lên đến 600Mb/s. </p><p><a class="preventdefault" href="../images/44/195383/hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j-33397-content-congketnoi.jpg" onclick="return false;"><img alt="Đầy đủ các cổng kết nối trên laptop văn phòng HP Pavilion 15 cs1009TU i5 (5JL43PA)" data-original="https://cdn.tgdd.vn/Products/Images/44/195383/hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j-33397-content-congketnoi.jpg" class='lazy' data-original="https://cdn.tgdd.vn/Products/Images/44/195383/hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j-33397-content-congketnoi.jpg" title="Đầy đủ các cổng kết nối trên laptop văn phòng HP Pavilion 15 cs1009TU i5 (5JL43PA)"></a></p>
+                    <div class="boxRtAtc">
+                        <div class="likewied">
+                            <div class="likeshare">
+                                <div class="fb-like" data-href="/laptop/hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+                            </div>
+                            <a onclick="showRatingAtc(this)" class="messenger"><b class="iconcom-likeAtc"></b>Không hài lòng bài viết</a>
+                        </div>
+
+
+                        <div class="bifRtCt bRtAtc hide">
+                            <textarea name="txtContent" rows="3" placeholder="Mời bạn góp ý để chúng tôi phục vụ tốt hơn"></textarea>
+                            <span>Hãy để lại thông tin để được hỗ trợ khi cần thiết (Không bắt buộc):</span>
+                            <div class="ifRtGd" data-val="0">
+                                <label onclick="rtAtcChangeGder(1)" class="ifGdM"><i></i>Anh</label>
+                                <label onclick="rtAtcChangeGder(2)" class="ifGdFm"><i></i>Chị</label>
+                            </div>
+                            <input type="text" name="txtFullName" placeholder="Họ tên">
+                            <input type="text" name="txtPhoneNumber" placeholder="Số điện thoại">
+                            <input type="text" name="txtEmail" placeholder="Email">
+                            <button type="submit" onclick="sendRatingContent(2)">Gửi góp ý<span>Cam kết bảo mật thông tin cá nhân</span></button>
+                            <label class="alert"></label>
+                        </div>
+
+                    </div>
+                </article>
+                <p class="show-more" style="display: block;" onclick="showArticle();">
+                    <a href="javascript:;" class="readmore">Đọc thêm </a>
+                </p>
+                <div class="bottom_order ">
+                    <div class="info_sp">
+                        <img class="lazy" width="70" height="70" data-original="../../cdn.tgdd.vn/Products/Images/44/195383/hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j-thumb-33397-400x400.jpg" />
+                        <div>
+                            <h3>Laptop HP Pavilion 15 cs1009TU i5 8265U/4GB/1TB/Win10 (5JL43PA)</h3>
+                            <strong>15.390.000₫</strong>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="area_order">
+                        <a href="@Url.Action("Purchase", "Cart")" data-value="195383"><b>Mua ngay... </b><span>Giao trong 90 ph&#250;t hoặc nhận tại siêu thị</span></a>
+
+                        <a class="buy_repay " href="../tra-gop/laptop/hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j.html"><b>Mua trả góp 0%</b><span>Thủ tục đơn giản</span></a>
+                        <a class="buy_repay s " href="../tra-gop/laptop/hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5jbf5f.html?m=credit"><b>Trả góp  qua thẻ</b><span>Visa, Master, JCB</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clr"></div>
+            <div class="compare">
+                <div class="tcpr">
+                    <h4>So s&#225;nh với c&#225;c sản phẩm tương tự</h4>
+                    <div class="sggProd">
+                        <form action="javascript:void(0)">
+                            <input type="text" placeholder="Nhập tên sản phẩm bạn muốn so sánh" onkeyup="SuggestCompare(this,event)" />
+                            <button type="submit"><i class="icontgdd-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+                <ul>
+                    <li class=laptop>
+                        <a href="hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j.html">
+                            <img data-original="https://cdn.tgdd.vn/Products/Images/44/195383/hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j-thumb-33397-400x400.jpg" class="lazy" />
+                            <span class="bdx">
+                                Bạn đang xem:
+                            </span>
+                            <h3>HP Pavilion 15 cs1009TU i5 8265U (5JL43PA)</h3>
+                            <strong>15.390.000₫</strong>
+                            <span class="rtp">
+                                <i class="iconcom-txtstar"></i>
+                                <i class="iconcom-txtstar"></i>
+                                <i class="iconcom-txtstar"></i>
+                                <i class="iconcom-txtunstar"></i>
+                                <i class="iconcom-txtunstar"></i>
+                            </span>
+                            <div class="desc"><span>CPU Intel Core i5 Coffee Lake, 1.60 GHz</span><span>RAM 4 GB</span><span>Pin Li-Ion 3 cell (4240mAh)</span></div>
+                        </a>
+                    </li>
+                    <li class=laptop>
+                        <a href="acer-aspire-a515-53-5112-i5-8265u-4gb-16gb-1tb-win.html">
+                            <img data-original="https://cdn.tgdd.vn/Products/Images/44/198790/acer-aspire-a515-53-5112-i5-8265u-4gb-16gb-1tb-win-1-1-33397-400x400.jpg" class="lazy" />
+                            <span class="bdx">
+                            </span>
+                            <h3>Acer Aspire A515 53 5112 i5 8265U (NX.H6DSV.002)</h3>
+                            <strong>15.490.000₫</strong>
+                            <div class="desc"><span>CPU Intel Core i5 Coffee Lake, 1.60 GHz</span><span>RAM 4 GB</span><span>Pin Li-Ion 3 cell</span></div>
+                        </a>
+                        <a href="hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j-vs-acer-aspire-a515-53-5112-i5-8265u-4gb-16gb-1tb-win.html" class="compdetail">So sánh chi tiết</a>
+                    </li>
+                    <li class=laptop>
+                        <a href="dell-inspiron-3576-i5-8250u-70157552.html">
+                            <img data-original="https://cdn.tgdd.vn/Products/Images/44/175159/dell-inspiron-3576-i5-8250u-70157552-400x400.jpg" class="lazy" />
+                            <span class="bdx">
+                            </span>
+                            <h3>Dell Inspiron 3576 i5 8250U (70157552)</h3>
+                            <strong>15.790.000₫</strong>
+                            <span class="rtp">
+                                <i class="iconcom-txtstar"></i>
+                                <i class="iconcom-txtstar"></i>
+                                <i class="iconcom-txtstar"></i>
+                                <i class="iconcom-txtunstar"></i>
+                                <i class="iconcom-txtunstar"></i>
+                            </span>
+                            <div class="desc"><span>CPU Intel Core i5 Kabylake Refresh, 1.60 GHz</span><span>RAM 4 GB</span><span>Pin Li-Ion 4 cell</span></div>
+                        </a>
+                        <a href="hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j-vs-dell-inspiron-3576-i5-8250u-70157552.html" class="compdetail">So sánh chi tiết</a>
+                    </li>
+                    <li class=laptop>
+                        <a href="lenovo-yoga-530-14ikb-i5-8250u-4g-128gb-win10-81e.html">
+                            <img data-original="https://cdn.tgdd.vn/Products/Images/44/195077/lenovo-yoga-530-14ikb-i5-8250u-4g-128gb-win10-81e-33397-thumb11-400x400.jpg" class="lazy" />
+                            <span class="bdx">
+                            </span>
+                            <h3>Lenovo YOGA 530 14IKB i5 8250U (81EK00MEVN)</h3>
+                            <strong>14.990.000₫</strong>
+                            <span class="rtp">
+                                <i class="iconcom-txtstar"></i>
+                                <i class="iconcom-txtstar"></i>
+                                <i class="iconcom-txtstar"></i>
+                                <i class="iconcom-txtstar"></i>
+                                <i class="iconcom-txtunstar"></i>
+                            </span>
+                            <div class="desc"><span>CPU Intel Core i5 Coffee Lake, 1.60 GHz</span><span>RAM 4 GB</span><span>Pin Li-Ion 4 cell</span></div>
+                        </a>
+                        <a href="hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j-vs-lenovo-yoga-530-14ikb-i5-8250u-4g-128gb-win10-81e.html" class="compdetail">So sánh chi tiết</a>
+                    </li>
+                </ul>
+            </div>
+
+
+
+
+            <div class="clr"></div>
+            <div class="comdetail">
+
+                <div class="boxRatingCmt" id="boxRatingCmt">
+                    <div class="hrt" id="danhgia">
+                        <div class="tltRt ">
+                            <h3 data-s="27" data-gpa="3" data-c="9">11 đ&#225;nh gi&#225; HP Pavilion 15 cs1009TU i5 8265U (5JL43PA)</h3>
+
+                        </div>
+                    </div>
+
+                    <div class="toprt">
+                        <div class="crt">
+
+                            <div class="lcrt" data-gpa="3">
+                                <b>3 <i class="iconcom-star"></i></b>
+
+                            </div>
+                            <div class="rcrt">
+                                <div class="r">
+                                    <span class="t">5 <i></i></span>
+                                    <div class="bgb">
+                                        <div class="bgb-in" style="width: 36%"></div>
+                                    </div>
+                                    <span class="c" onclick="ratingCmtList(1,5)" data-buy="3"><strong>4</strong> đánh giá</span>
+                                </div>
+
+                                <div class="r">
+                                    <span class="t">4 <i></i></span>
+                                    <div class="bgb">
+                                        <div class="bgb-in" style="width: 9%"></div>
+                                    </div>
+                                    <span class="c" onclick="ratingCmtList(1,4)" data-buy="1"><strong>1</strong> đánh giá</span>
+                                </div>
+
+                                <div class="r">
+                                    <span class="t">3 <i></i></span>
+                                    <div class="bgb">
+                                        <div class="bgb-in" style="width: 18%"></div>
+                                    </div>
+                                    <span class="c" onclick="ratingCmtList(1,3)" data-buy="1"><strong>2</strong> đánh giá</span>
+                                </div>
+
+                                <div class="r">
+                                    <span class="t">2 <i></i></span>
+                                    <div class="bgb">
+                                        <div class="bgb-in" style="width: 9%"></div>
+                                    </div>
+                                    <span class="c" onclick="ratingCmtList(1,2)" data-buy="1"><strong>1</strong> đánh giá</span>
+                                </div>
+
+                                <div class="r">
+                                    <span class="t">1 <i></i></span>
+                                    <div class="bgb">
+                                        <div class="bgb-in" style="width: 27%"></div>
+                                    </div>
+                                    <span class="c" onclick="ratingCmtList(1,1)" data-buy="3"><strong>3</strong> đánh giá</span>
+                                </div>
+
+                            </div>
+                            <div class="bcrt">
+                                <a href="javascript:showInputRating()">Gửi đánh giá của bạn</a>
+                            </div>
+                        </div>
+                        <div class="clr"></div>
+
+
+
+                        <form class="input" name="fRatingComment" style="display: none">
+                            <input type="hidden" name="hdfStar" id="hdfStar" value="0" />
+                            <input type="hidden" name="hdfProductID" id="hdfProductID" value="195383" />
+                            <input type="hidden" name="hdfRatingImg" class="hdfRatingImg" />
+                            <div class="ips">
+                                <span>Chọn đánh giá của bạn</span>
+                                <span class="lStar">
+                                    <i class="iconcom-unstar" id="s1"></i>
+                                    <i class="iconcom-unstar" id="s2"></i>
+                                    <i class="iconcom-unstar" id="s3"></i>
+                                    <i class="iconcom-unstar" id="s4"></i>
+                                    <i class="iconcom-unstar" id="s5"></i>
+                                </span>
+                                <span class="rsStar hide"></span>
+                            </div>
+                            <div class="clr"></div>
+                            <div class="ipt hide">
+                                <div class="ct">
+                                    <textarea name="fRContent" placeholder="Nhập đánh giá về sản phẩm (tối thiểu 80 ký tự)" onkeyup="countTxtRating()"></textarea>
+                                    <div class="extCt">
+                                        <label onclick="javascript:void(0);" class="lnksimg btnRatingUpload"><i class="iconcom-pict"></i>Đính kèm ảnh</label>
+                                        <span class="ckt"></span>
+                                        <input id="hdFileRatingUpload" type="file" class="hide" accept="image/x-png, image/gif, image/jpeg" />
+                                    </div>
+                                </div>
+                                <div class="if">
+                                    <input type="text" name="fRName" placeholder="Họ tên" />
+                                    <input type="text" name="fRPhone" placeholder="Số điện thoại" />
+                                    <input type="text" name="fREmail" placeholder="Email" />
+                                    <a href="javascript:submitRatingComment();">GỬI ĐÁNH GIÁ</a>
+                                </div>
+                                <div class="clr"></div>
+                                <ul class="resImg hide"></ul>
+                                <span class="lbMsgRt"></span>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="list">
+                        <ul class="ratingLst">
+                            <li id="r-33722186" class="par">
+                                <div class="rh">
+                                    <span>h&#249;ng</span>
+                                    <label class="sttB"><i class="iconcom-checkbuy"></i>Đ&#227; mua tại Thegioididong.com</label>
+                                </div>
+
+                                <div class="rc">
+                                    <p>
+                                        <span>
+                                            <i class="iconcom-txtstar"></i>
+                                            <i class="iconcom-txtstar"></i>
+                                            <i class="iconcom-txtstar"></i>
+                                            <i class="iconcom-txtstar"></i>
+                                            <i class="iconcom-txtunstar"></i>
+                                        </span>
+                                        <i>máy chạy êm,màn hinh fhd nên đẹp,loa nghe tạm đc muốn hay thì gắn loa ngoài,độ nảy bàn phím tốt.mỗi tội máy khởi động quá chậm</i>
+                                    </p>
+                                </div>
+
+                                <div class="rcf"><p>Thegioididong.com xác nhận: <label><i class='iconcom-rtusr'></i><span>Khách hàng <b class='name'>hùng</b></span></label><label><i class='iconcom-rtadr'></i><span>Mua online trên website Thegioididong.com</span></label><div class='clr'></div><label><i class='iconcom-rttime'></i><span>Mua <b>2 tuần </b> trước</span></label></p></div>
+
+                                <div class="ra">
+                                    <a href="javascript:showRatingCmtChild('r-33722186');" class="cmtr">Thảo luận</a>
+                                    <span>• </span>
+                                    <a href="javascript:likeRating(33722186);" class="cmtl" data-like="0"><i class="iconcom-like"></i>Th&#237;ch</a><span> • </span>
+                                    <a href="javascript:;" class="cmtd">2 tuần trước</a>
+                                </div>
+                            </li>
+                            <li id="r-33837899" class="rp-33722186 child hide">
+                                <div class="rh">
+                                    <span>Ngọc T&#226;n</span>
+                                </div>
+
+                                <div class="rc">
+                                    <p>
+                                        <i>Vấn đề muôn thuở của ổ cứng HDD, máy này có hỗ trợ khe cắm ổ SSD PCIe mà bạn, mua chừng 128GB về gắn vô rồi chuyển hết WIN và phần mềm qua thì đảm bảo tốc độ ánh sáng, nâng RAM lên 8GB nữa thì chạy đa nhiệm siêu mượt luôn. (Nếu không muốn bị mất bảo hành thì có thể mua về rồi đem ra hãng cho họ gắn)</i>
+                                    </p>
+                                </div>
+
+
+                                <div class="ra">
+                                    <a href="javascript:likeRating(33837899);" class="cmtl" data-like="0"><i class="iconcom-like"></i>Th&#237;ch</a><span> • </span>
+                                    <a href="javascript:;" class="cmtd">1 tuần trước</a>
+                                </div>
+                            </li>
+                            <li id="r-33961828" class="rp-33722186 child hide">
+                                <div class="rh">
+                                    <span>mai van chung</span>
+                                </div>
+
+                                <div class="rc">
+                                    <p>
+                                        <i>vo hieu hoa ung dung chay nen va starup di ban </i>
+                                    </p>
+                                </div>
+
+
+                                <div class="ra">
+                                    <a href="javascript:likeRating(33961828);" class="cmtl" data-like="0"><i class="iconcom-like"></i>Th&#237;ch</a><span> • </span>
+                                    <a href="javascript:;" class="cmtd">3 ng&#224;y trước</a>
+                                </div>
+                            </li>
+                            <li class="rr-33722186 reply hide">
+                                <input placeholder="Nhập thảo luận của bạn" />
+                                <a href="javascript:ratingRelply(33722186);" class="rrSend">GỬI</a>
+                                <div class="ifrl">
+                                    <span>Khách</span> | <a href="javascript:cmtEditName()">Nhập tên</a>
+                                </div>
+                            </li>
+                            <li id="r-33524779" class="par">
+                                <div class="rh">
+                                    <span>Nguyễn Quỳnh Trang</span>
+                                    <label class="sttB"><i class="iconcom-checkbuy"></i>Đ&#227; mua tại DienmayXanh.com</label>
+                                </div>
+
+                                <div class="rc">
+                                    <p>
+                                        <span>
+                                            <i class="iconcom-txtstar"></i>
+                                            <i class="iconcom-txtstar"></i>
+                                            <i class="iconcom-txtstar"></i>
+                                            <i class="iconcom-txtstar"></i>
+                                            <i class="iconcom-txtstar"></i>
+                                        </span>
+                                        <i>Mình vừa mua máy này cách đây 3 ngày hiện tại thì thấy xài cũng ổn , máy ok. Chơi lmht ở chế độ tb mượt. Máy khởi động cũng khá nhanh. Trong tgian xài cũng có nghe tiếng quạt chắc do máy chạy lâu hay quá nhiệt. Mọi thứ đều ok nâng thêm ram với ssd là quá ngon. Điều mình hài lòng nhất là nhân viên hỗ trợ trả góp ở home credit rất nhiệt tình. Mình mua ở tgdd 3/2 cảm thấy mấy chị tgdd chịu khó. Hihi cảm ơn </i>
+                                    </p>
+                                </div>
+
+                                <div class="rcf"><p>Thegioididong.com xác nhận: <label><i class='iconcom-rtusr'></i><span>Khách hàng <b class='name'>Nguyễn Quỳnh Trang</b></span></label><label><i class='iconcom-rtadr'></i><span>Mua online trên website DienmayXanh.com</span></label><div class='clr'></div><label><i class='iconcom-rttime'></i><span>Mua <b>4 tuần </b> trước</span></label></p></div>
+
+                                <div class="ra">
+                                    <a href="javascript:showRatingCmtChild('r-33524779');" class="cmtr">Thảo luận</a>
+                                    <span>• </span>
+                                    <a href="javascript:likeRating(33524779);" class="cmtl" data-like="0"><i class="iconcom-like"></i>Th&#237;ch</a><span> • </span>
+                                    <a href="javascript:;" class="cmtd">3 tuần trước</a>
+                                </div>
+                            </li>
+                            <li id="r-33543271" class="rp-33524779 child hide">
+                                <div class="rh">
+                                    <span>Nh&#226;n</span>
+                                </div>
+
+                                <div class="rc">
+                                    <p>
+                                        <i>Con này xài các tác vụ văn phòng mượt không bạn? Vì mình đang tính mua con này nên đợi review của người dùng đã mua trước.</i>
+                                    </p>
+                                </div>
+
+
+                                <div class="ra">
+                                    <a href="javascript:likeRating(33543271);" class="cmtl" data-like="0"><i class="iconcom-like"></i>Th&#237;ch</a><span> • </span>
+                                    <a href="javascript:;" class="cmtd">3 tuần trước</a>
+                                </div>
+                            </li>
+                            <li id="r-33621744" class="rp-33524779 child hide">
+                                <div class="rh">
+                                    <span>Nguyen quynh trang</span>
+                                </div>
+
+                                <div class="rc">
+                                    <p>
+                                        <i>Nó ok so với tầm giá khá mượt thôi bạn, đẹp , nữ tính, phù hợp làm văn phòng. Nếu bạn muốn nhanh hơn thì thêm ssd nha bạn với ram là bao ngon</i>
+                                    </p>
+                                </div>
+
+
+                                <div class="ra">
+                                    <a href="javascript:likeRating(33621744);" class="cmtl" data-like="0"><i class="iconcom-like"></i>Th&#237;ch</a><span> • </span>
+                                    <a href="javascript:;" class="cmtd">3 tuần trước</a>
+                                </div>
+                            </li>
+                            <li class="rr-33524779 reply hide">
+                                <input placeholder="Nhập thảo luận của bạn" />
+                                <a href="javascript:ratingRelply(33524779);" class="rrSend">GỬI</a>
+                                <div class="ifrl">
+                                    <span>Khách</span> | <a href="javascript:cmtEditName()">Nhập tên</a>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="clr"></div>
+                        <div class="pgrc"><div class="pagcomment"><span class="active">1</span><a href="javascript:ratingCmtList(2)" title="trang 2">2</a><a href="javascript:ratingCmtList(3)" title="trang 3">3</a><a href="javascript:ratingCmtList(4)" title="trang 4">4</a><a href="javascript:ratingCmtList(2)" title="trang 2">»</a></div></div>
+                    </div>
+                </div>
+
+                <div class="wrap_comment" title="Bình luận sản phẩm" id="comment" cmtcategoryid="2" siteid="1" detailid="198795" cateid="15" urlpage="" pagesize="5">
+                    <textarea id="txtEditorExt" name="" cols="" rows="" class="txtEditor" placeholder="Mời Bạn để lại bình luận..."></textarea>
+                </div>
+
+            </div>
+
+
+
+
+        </aside>
+        <aside class="right_content">
+
+
+            <div class="tableparameter">
+
+                <h2>Thông số kỹ thuật</h2>
+                <ul class="parameter">
+                    <li class="g92_94_93"><span>CPU:</span><div><a href='../hoi-dap/tong-hop-cac-vi-xu-ly-the-he-thu-8-cua-intel-1113697.html' target='_blank'>Intel Core i5 Coffee Lake</a>, 8265U, 1.60 GHz</div></li>
+                    <li class="g146_149_155"><span>RAM:</span><div>4 GB, <a href='../hoi-dap/ram-ddr4-la-gi-882173.html' target='_blank'>DDR4 (2 khe)</a>, 2666 MHz</div></li>
+                    <li class="g184"><span>Ổ cứng:</span><div>HDD: 1 TB SATA3, <a href='../hoi-dap/tim-hieu-ve-cac-chuan-toc-do-cua-o-cung-ssd-tren-1115453.html' target='_blank'>Hỗ trợ khe cắm SSD M.2 PCIe</a></div></li>
+                    <li class="g187_189"><span>Màn hình:</span><div>15.6 inch, <a href='../hoi-dap/man-hinh-fhd-la-gi-956294.html' target='_blank'>Full HD (1920 x 1080)</a></div></li>
+                    <li class="g193_191"><span>Card màn hình:</span><div><a href='../hoi-dap/card-do-hoa-tich-hop-la-gi-950047.html' target='_blank'>Card đồ họa tích hợp</a>, <a href='../hoi-dap/intel-hd-graphics-620-co-manh-khong-953533.html' target='_blank'>Intel® HD Graphics 620</a></div></li>
+                    <li class="g200"><span>Cổng kết nối:</span><div><a href='../hoi-dap/usb-31-la-gi-926746.html' target='_blank'>2 x USB 3.1</a>, <a href='../tin-tuc/hdmi-la-gi--590061.html' target='_blank'>HDMI</a>, <a href='../hoi-dap/lan-la-gi-rj45-la-cai-gi-743872.html' target='_blank'>LAN (RJ45)</a>, <a href='../hoi-dap/usb-typec-chuan-muc-cong-ket-noi-moi-723760.html' target='_blank'>USB Type-C</a></div></li>
+                    <li class="g8599"><span>Hệ điều hành:</span><div><a href='../hoi-dap/windows-10-co-tot-khong-953411.html' target='_blank'>Windows 10 Home SL</a></div></li>
+                    <li class="g7903_11082"><span>Thiết kế:</span><div>Vỏ nhựa - nắp lưng bằng kim loại, PIN liền</div></li>
+                    <li class="g254_255"><span>Kích thước:</span><div>Dày 17.9 mm, 1.8 kg</div></li>
+                </ul>
+                <button type="button" class="viewparameterfull" onclick="getFullSpec(195383,)">Xem cấu hình chi tiết</button>
+
+
+                <div class="closebtn none"><i class="icondetail-closepara"></i></div>
+                <div class="fullparameter">
+                    <div class="scroll">
+                        <h3>Thông số kỹ thuật chi tiết HP Pavilion 15 cs1009TU i5 8265U/4GB/1TB/Win10 (5JL43PA)</h3>
+                        <img id="imgKit" width="500" height="430" alt="Thông số kỹ thuật 195383" />
+                        <ul class="parameterfull"></ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="clr"></div>
+            <div class="newslist">
+                <h4>Tin tức về laptop</h4>
+                <ul>
+                    <li>
+                        <a href="../tin-tuc/laptop-ban-chay-tai-tgdd-giam-gia-den-700k-kem-khu-1147525.html">
+                            <img data-original="https://cdn.tgdd.vn/Files/2019/01/31/1147525/laptop-giam-gia_800x450-300x200.jpg" class="lazy">
+                            <h3>Loạt laptop b&#225;n chạy tại TGDĐ được giảm gi&#225; l&#234;n đến 700k k&#232;m nhiều khuyến m&#227;i</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../tin-tuc/lenovo-ideapad-530s-cau-hinh-cuc-tot-gia-ngon-nhie-1161490.html">
+                            <img data-original="https://cdn.tgdd.vn/Files/2019/04/18/1161490/l1_800x450-300x200.jpg" class="lazy">
+                            <h3>Lenovo Ideapad 530S cấu h&#236;nh cực tốt core i7 SSD 256 GB, gi&#225; ngon, nhiều qu&#224; chất</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../tin-tuc/iphone-11-se-co-hieu-nang-nhanh-hon-hau-het-cac-ma-1161212.html">
+                            <img data-original="https://cdn.tgdd.vn/Files/2019/04/17/1161212/iphone-11-elle-man_800x450-300x200.jpg" class="lazy">
+                            <h3>iPhone 11 sẽ c&#243; hiệu năng nhanh hơn hầu hết c&#225;c mẫu laptop mỏng nhẹ hiện nay?</h3>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
+
+            <div class="accessories">
+                <div>
+                    <h3>Phụ kiện HP Pavilion 15 cs1009TU i5 8265U (5JL43PA)</h3>
+
+                </div>
+                <ul>
+                    <li>
+                        <a href="../tai-nghe/tai-nghe-ep-kanen-s50-den.html">
+                            <img data-original="https://cdn.tgdd.vn/Products/Images/54/82701/tai-nghe-ep-kanen-s50-den-1-600x600.jpg" class="lazy" />
+                            <h3>Tai nghe nh&#233;t trong Kanen S50</h3>
+                            <strong class="gs">120.000₫</strong>
+                            <strong class="gg">200.000₫</strong>
+                            <label class="per">Giảm 40%</label>
+                        </a>
+                        <a href="../gio-hang.html?ProductId=82701" class="buyacc">Mua</a>
+                    </li>
+                    <li>
+                        <a href="../usb/usb-transcend-jetflash-790-16gb-30.html">
+                            <img data-original="https://cdn.tgdd.vn/Products/Images/75/70944/usb-transcend-jetflash-790-16gb-30-1-8-600x600.jpg" class="lazy" />
+                            <h3>USB 3.0-3.1 16 GB Transcend JetFlash 790</h3>
+                            <strong class="gs">140.000₫</strong>
+                            <strong class="gg">200.000₫</strong>
+                            <label class="per">Giảm 30%</label>
+                        </a>
+                        <a href="../gio-hang.html?ProductId=70944" class="buyacc">Mua</a>
+                    </li>
+                    <li>
+                        <a href="../phan-mem/eset-nod32-antivirus-cho-windows-1-pc.html">
+                            <img data-original="https://cdn.tgdd.vn/Products/Images/85/109490/eset-nod32-antivirus-cho-windows-1-pc-cava-600x600.jpg" class="lazy" />
+                            <h3>ESET NOD32 Antivirus cho Windows - 1 PC</h3>
+                            <strong>150.000₫</strong>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../chuot-may-tinh/chuot-khong-day-zadez-m325.html">
+                            <img data-original="https://cdn.tgdd.vn/Products/Images/86/151027/chuot-khong-day-zadez-m325-ava-600x600.jpg" class="lazy" />
+                            <h3>Chuột kh&#244;ng d&#226;y Zadez M325</h3>
+                            <strong class="gs">140.000₫</strong>
+                            <strong class="gg">200.000₫</strong>
+                            <label class="per">Giảm 30%</label>
+                        </a>
+                        <a href="../gio-hang.html?ProductId=151027" class="buyacc">Mua</a>
+                    </li>
+                    <li>
+                        <a href="../loa-laptop/fenda-u213a.html">
+                            <img data-original="https://cdn.tgdd.vn/Products/Images/382/57859/fenda-u213a-ava-600x600.jpg" class="lazy" />
+                            <h3>Loa vi t&#237;nh Fenda U213A - 2.0</h3>
+                            <strong class="gs">154.000₫</strong>
+                            <strong class="gg">220.000₫</strong>
+                            <label class="per">Giảm 30%</label>
+                        </a>
+                        <a href="../gio-hang.html?ProductId=57859" class="buyacc">Mua</a>
+                    </li>
+                </ul>
+                <a class="viewall" href="../phu-kien/laptop/hp-pavilion-15-cs1009tu-i5-8265u-4gb-1tb-win10-5j.html">Xem tất cả phụ kiện HP Pavilion 15 cs1009TU i5 8265U (5JL43PA)</a>
+            </div>
+
+        </aside>
+    </div>
+    <div class="clr test01"></div>
+</section>

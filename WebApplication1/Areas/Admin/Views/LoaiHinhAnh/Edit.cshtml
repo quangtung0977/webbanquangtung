@@ -1,0 +1,295 @@
+﻿@model WebApplication1.Areas.Admin.Models.admin_loaihinhanh
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>*@
+
+<script src="~/Content/ckeditor/ckeditor.js"></script>
+<script src="~/Content/ckfinder/ckfinder.js"></script>
+
+<script type="text/javascript">
+    var countElement=[];
+    var listUrlImg="";
+    var imgsAdd="";
+    var imgsRemove="";
+    $(function () {
+
+        $('#Brows').click(function () {
+            var ckfinder = new CKFinder();
+            ckfinder.selectActionFunction = function (Images) {
+                $('#ghichu').val(Images);
+                $('#imgghichu').attr("src", Images);
+                
+            };
+            ckfinder.popup();
+        });
+
+    })
+
+    function OpenPopupImage(stt) {
+        //var btn = '#Brows' + stt;
+        var txt = '#_urlHinhAnh' + stt;
+        var img = '#imgRv' + stt;
+
+        var ckfinder = new CKFinder();
+        ckfinder.selectActionFunction = function (Images) {
+            $(txt).val(Images);
+            $(img).attr("src", Images);
+        };
+        ckfinder.popup();
+    }
+</script>
+
+<style>
+    #dynamic_field td{
+        border:none;
+    }
+    .brwBtn{
+        margin-left:5px;
+    }
+    .imgHinhAnhRv{
+        margin-bottom:5px;
+    }
+</style>
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>admin_loaihinhanh</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.id)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.tenloaihinhanh, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.tenloaihinhanh, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.tenloaihinhanh, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.tenloaihinhanh_en, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.tenloaihinhanh_en, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.tenloaihinhanh_en, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group hidden">
+            @Html.LabelFor(model => model.ngaytao, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ngaytao, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ngaytao, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group hidden">
+            @Html.LabelFor(model => model.ngaycapnhat, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ngaycapnhat, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ngaycapnhat, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group hidden">
+            @Html.LabelFor(model => model.nguoitao, "nguoitao", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("nguoitao", null, htmlAttributes: new { @class = "form-control disabledClass" })
+                @Html.ValidationMessageFor(model => model.nguoitao, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.hienthi, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.hienthi)
+                    @Html.ValidationMessageFor(model => model.hienthi, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group hidden">
+            @Html.LabelFor(model => model.daxoa, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.daxoa)
+                    @Html.ValidationMessageFor(model => model.daxoa, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.motahinhanh, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.motahinhanh, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.motahinhanh, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.motahinhanh_en, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.motahinhanh_en, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.motahinhanh_en, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ghichu, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ghichu, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ghichu, "", new { @class = "text-danger" })
+                <input type="button" id="Brows" name="Brows" value="Brows images" />
+                <img class="imgHinhAnhRv" id="imgghichu" width="80" height="80" src="@Model.ghichu"/>
+            </div>
+        </div>
+
+
+        @*test gallery*@
+        <div class="form-group hidden">
+            <label class = "control-label col-md-2">
+                Hình ảnh chi tiết
+            </label>
+            <div class="col-md-10">
+                <div class="container" style="width:100%;">
+                    <div class="form-group">
+                        @*<form name="add_name" id="add_name" method="post" action="~/Areas/Admin/Controllers/LoaiHinhAnh/EditImg">*@
+                        <form name="add_name" id="add_name" method="post">
+                            <div class="table-responsive">
+                                    @{ 
+                                        if (ViewBag.arrHinhAnh != null)
+                                        {
+                                            foreach (var item1 in ViewBag.arrHinhAnh)
+                                            {
+                                                <script>
+                                                    countElement.push('@item1.id');
+                                                    console.log("countElement",countElement);
+                                                </script>
+                                            }
+                                        }
+                                    }
+
+                                <table class="table-bordered" id="dynamic_field" style="border:none;">
+                                    <tr>
+                                        <td><button type="button" name="add" id="add" class="btn btn-success">Add More</button></td>
+                                        <td><button type="button" name="add" onclick="location.reload();" class="btn btn-primary">Reset</button></td>
+                                    </tr>
+                                    @{
+                                        int i = 0;
+                                        if (ViewBag.arrHinhAnh != null)
+                                        {
+
+                                            foreach (var item in ViewBag.arrHinhAnh)
+                                            {
+                                                string row = "row" + item.id; string urlhinhanh = "_urlHinhAnh" + item.id; string brows = "Brows" + item.id; string imgrv = "imgRv" + item.id;
+
+                                                    <tr class="rowUrlHinhAnh" id="@row">
+                                                        <td><input type="text" name="name[]" placeholder="Image url..." id="@item.urlhinhanh" value="@item.urlhinhanh" class="form-control name_list"></td>
+                                                        <td>
+                                                            <button type="button" name="remove" id="@item.id" onclick="RmvElement('@item.id')" class="btn btn-danger btn_remove">X</button>
+                                                            <input class="brwBtn" type="button" id="@brows" name="Brows" onclick="OpenPopupImage(@item.id)" value="Brows images">
+                                                            <img class="imgHinhAnhRv" id="@imgrv" width="80" height="80" src="@item.urlhinhanh">
+                                                        </td>
+                                                    </tr>
+                                                //i++;
+                                                i = item.id+1;
+                                            }
+                                        }
+                                    }
+                                </table>
+                                <input type="button" name="submit" id="submit" class="btn btn-info" value="Submit" />
+                            </div>
+                        </form>
+                        <p class="hidden"><tt id="results"></tt></p>
+                    </div>
+                    <script>
+                        function RmvElement(idimg){
+                            $('#row'+idimg+'').remove();
+                            var a = countElement.indexOf(idimg);
+                            countElement.splice(a,1);
+                            listUrlImg="";
+                            for(var i=0;i<countElement.length;i++){
+                                      
+                                var imglink="#_urlHinhAnh"+countElement[i];
+                                var _img=imglink=$(imglink).val();
+                                listUrlImg+=_img+";";
+                            }
+                            console.log("listUrlImg",listUrlImg);
+                            console.log("countElementrmv",countElement);
+
+                        }
+                        $(document).ready(function () {
+                             var i=@i;
+                             $('#add').click(function(){
+                                 countElement.push(i.toString());
+                                 $('#dynamic_field').append('<tr class="rowUrlHinhAnh" id="row' + i + '"><td><input type="text" name="name[]" placeholder="Image url..." id="'
+                                      + '_urlHinhAnh' + i + '" class="form-control name_list" /></td><td><button type="button" name="remove" id="'
+                                      + i + '" class="btn btn-danger btn_remove" onclick="RmvElement('+'\''+i+'\''+')">X</button>'
+                                      + '<input class="brwBtn" type="button" id="Brows' + i + '" name="Brows" onclick="OpenPopupImage('+i+')" value="Brows images" />'
+                                      + '<img class="imgHinhAnhRv" id="' + 'imgRv' + i + '" width="80" height="80" src="/images/index-img-icon.png" />'
+                                      + '</td></tr>');
+                                 listUrlImg="";
+                                 for(var j=0;j<countElement.length;j++){
+                                      
+                                     var imglink="#_urlHinhAnh"+countElement[j];
+                                     var _img=imglink=$(imglink).val();
+                                     listUrlImg+=_img+";";
+                                 }
+                                  i++;
+                             });
+                             $('#submit').click(function(){
+                                 console.log('countElement',countElement);
+                                 console.log('countElementlll',countElement.length);
+
+                                 listUrlImg="";
+                                 for(var i=0;i<countElement.length;i++){
+                                      
+                                     var imglink="#_urlHinhAnh"+countElement[i];
+                                     var _img=imglink=$(imglink).val();
+                                     listUrlImg+=_img+";";
+                                 }
+                                 console.log("listUrlImg",listUrlImg);
+
+
+                                  $.ajax({
+                                      url: '@Url.Action("EditImg", "LoaiHinhAnh")',
+                                      method:"POST",
+                                      dataType:"json",
+                                      data: "urlImgList="+listUrlImg,
+                                       success:function(data)
+                                       {
+                                           //console.log('data',data);
+                                           // $('#add_name')[0].reset();
+                                       }
+                                  });
+                                 location.reload();
+                             });
+                        });
+                    </script>
+                </div>  
+            </div>
+        </div>
+        @*end test gallery*@
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

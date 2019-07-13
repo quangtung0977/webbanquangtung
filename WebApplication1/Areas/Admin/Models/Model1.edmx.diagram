@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bd9a57441a3f4346be69b46e827e7d51" Name="Diagram1">
+        <EntityTypeShape EntityType="WebApplication1Model.admin_account" Width="1.5" PointX="0.75" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebApplication1Model.admin_baivietlienhe" Width="1.5" PointX="3" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebApplication1Model.admin_gioithieu" Width="1.5" PointX="3" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebApplication1Model.admin_hanhtrinh" Width="1.5" PointX="5.25" PointY="21.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebApplication1Model.admin_hinhanh" Width="1.5" PointX="5.25" PointY="27" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebApplication1Model.admin_loaihanhtrinh" Width="1.5" PointX="3" PointY="26" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebApplication1Model.admin_loaihinhanh" Width="1.5" PointX="3" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebApplication1Model.admin_loaitintuc" Width="1.5" PointX="3" PointY="33.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebApplication1Model.admin_nhomthanhvien" Width="1.5" PointX="3" PointY="37.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebApplication1Model.admin_thanhvien" Width="1.5" PointX="8.25" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebApplication1Model.admin_thongtincodinh" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebApplication1Model.admin_tintuc" Width="1.5" PointX="8.25" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebApplication1Model.banner" Width="1.5" PointX="3" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebApplication1Model.loaibanner" Width="1.5" PointX="0.75" PointY="15" IsExpanded="true" />
+        <AssociationConnector Association="WebApplication1Model.FK_admin_baivietlienhe_admin_account" ManuallyRouted="false" />
+        <AssociationConnector Association="WebApplication1Model.FK_admin_gioithieu_admin_account" ManuallyRouted="false" />
+        <AssociationConnector Association="WebApplication1Model.FK_admin_hanhtrinh_admin_account" ManuallyRouted="false" />
+        <AssociationConnector Association="WebApplication1Model.FK_admin_hinhanh_admin_account" ManuallyRouted="false" />
+        <AssociationConnector Association="WebApplication1Model.FK_admin_loaihanhtrinh_admin_account" ManuallyRouted="false" />
+        <AssociationConnector Association="WebApplication1Model.FK_admin_loaihinhanh_admin_account" ManuallyRouted="false" />
+        <AssociationConnector Association="WebApplication1Model.FK_admin_loaitintuc_admin_account" ManuallyRouted="false" />
+        <AssociationConnector Association="WebApplication1Model.FK_admin_nhomthanhvien_admin_account" ManuallyRouted="false" />
+        <AssociationConnector Association="WebApplication1Model.FK_admin_thanhvien_admin_account" ManuallyRouted="false" />
+        <AssociationConnector Association="WebApplication1Model.FK_admin_tintuc_admin_account" ManuallyRouted="false" />
+        <AssociationConnector Association="WebApplication1Model.FK_banner_admin_account" ManuallyRouted="false" />
+        <AssociationConnector Association="WebApplication1Model.FK_admin_hanhtrinh_admin_loaihanhtrinh" ManuallyRouted="false" />
+        <AssociationConnector Association="WebApplication1Model.FK_admin_hinhanh_admin_loaihinhanh" ManuallyRouted="false" />
+        <AssociationConnector Association="WebApplication1Model.FK_admin_tintuc_admin_loaitintuc" ManuallyRouted="false" />
+        <AssociationConnector Association="WebApplication1Model.FK_admin_thanhvien_admin_nhomthanhvien" ManuallyRouted="false" />
+        <AssociationConnector Association="WebApplication1Model.FK_banner_loaibanner" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="WebApplication1Model.admin_baiviethuongdandangkythanhvien" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="WebApplication1Model.HinhAnhChoChuDe" Width="1.5" PointX="5.25" PointY="31.75" />
+        <EntityTypeShape EntityType="WebApplication1Model.loaisanpham" Width="1.5" PointX="3.375" PointY="3.75" />
+        <EntityTypeShape EntityType="WebApplication1Model.sanpham" Width="1.5" PointX="5.375" PointY="0.75" />
+        <AssociationConnector Association="WebApplication1Model.FK_HinhAnhChoChuDe_admin_loaihinhanh" />
+        <AssociationConnector Association="WebApplication1Model.FK_sanpham_loaisanpham" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

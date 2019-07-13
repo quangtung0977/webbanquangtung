@@ -1,0 +1,336 @@
+﻿<link rel="stylesheet" type="text/css" href="~/css/news-style.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<style>
+    #showLess {
+        color: #808080;
+        cursor: pointer;
+        display: none;
+    }
+        #showLess b {
+            transform: rotate(180deg);
+            border-top: 5px solid #808080;
+        }
+</style>
+
+@model IEnumerable<WebApplication1.Areas.Admin.Models.admin_tintuc>
+
+<section>
+    <ul class="menu">
+        <li><a href="tin-tuc.html" class=actmenu>Tin mới</a></li>
+        <li><a href="tin-tuc/san-pham.html">Sản phẩm mới</a></li>
+        <li><a href="tin-tuc/danh-gia/210.html">Đánh giá</a></li>
+        <li><a href="tin-tuc/meo-hay/1036.html">Mẹo hay</a></li>
+        <li><a href="tin-tuc/thi-truong/1141.html">Thị trường</a></li>
+        <li><a href="tin-tuc/cuoc-song-so/1717.html">Cuộc sống số</a></li>
+        <li><a href="tin-tuc/game-ung-dung/1273.html">Game - App</a></li>
+        <li><a href="tin-tuc/su-kien.html">Sự kiện</a></li>
+        <li><a href="tin-tuc/laptop/1269.html">Laptop</a></li>
+        <li><a href="tin-tuc/do-choi-cong-nghe/1700.html">Đồ chơi công nghệ</a></li>
+        <li><a href="tin-tuc/e-magazine/1701.html">E-Magazine</a><label class="menulabel ">Mới</label></li>
+
+    </ul>
+    @{ 
+        int so10 = 10;
+        <div>@so10 @ViewBag.ngayhientai @ViewBag.namhientai</div>
+    }
+    <aside class="leftcate">
+        <ul class="newslist latest">
+            @{
+                var firstNews = Model.FirstOrDefault();
+                if (firstNews != null)
+                {
+                    <li>
+                        <a href="@Url.Action("Detail", "News", new {id=firstNews.id })">
+                            <div class="tempvideo">
+                                <img width="100" height="70" src="@firstNews.hinhdaidien" />
+                            </div>
+                            <h3>
+                                @firstNews.tentintuc
+                                @*<span class="lesscom"><i class="iconnews-comcya"></i>14</span>*@
+                            </h3>
+                            <figure>
+                                @firstNews.motasoluoc
+                            </figure>
+                        </a>
+                    </li>
+                }
+            }
+            @*<li>
+                <a href="@Url.Action("Detail", "News", new {id=1 })">
+                    <div class="tempvideo">
+                        <img width="100" height="70" src="https://cdn.tgdd.vn/Files/2019/05/03/1164680/4_800x450-600x400.jpg" />
+                    </div>
+                    <h3>
+                        Galaxy Fold gi&#225; gần 2.000 USD gặp trục trặc về m&#224;n h&#236;nh sau v&#224;i ng&#224;y sử dụng
+                        <span class="lesscom"><i class="iconnews-comcya"></i>14</span>
+                    </h3>
+                    <figure>
+                        Theo chia sẻ từ một số reviewer được trang BuzzFeed tổng hợp và đăng tải, những chiếc Galaxy Fold (điện thoại màn hình gập mà Samsung vừa ra mắt hồi tháng 2) được gửi đến cho họ để thực hiện bài đánh giá đã gặp trục trặc về màn hình sau vài ngày.
+                    </figure>
+                </a>
+            </li>*@
+        </ul>
+
+        <ul class="newslist" id="myList">
+            @{
+                int i = 0;
+                if (Model.Count() > 1)
+                {
+                    foreach (var item in Model)
+                    {
+                        if (i == 0)
+                        {
+                            i++;
+                        }
+                        else
+                        {
+                            <li>
+                                <a href="@Url.Action("Detail", "News", new {id=item.id })">
+                                    <div class="tempvideo">
+                                        <img width="100" height="70" data-src="@item.hinhdaidien" class="lazy" src="@item.hinhdaidien" />
+                                    </div>
+                                    <h3>
+                                        @item.tentintuc
+
+                                    </h3>
+                                    <figure>
+                                        @item.motasoluoc
+                                    </figure>
+                                    <div class="timepost">
+                                        @*<span>25 ph&#250;t trước</span>
+                                        <span class="namecate">Tin nhanh 24/7</span>*@
+                                        <span>@String.Format("{0:d/M/yyyy HH:mm}", item.ngaycapnhat)</span>
+                                    </div>
+                                </a>
+                            </li>
+                            i++;
+                        }
+                    }
+                }
+
+            }
+        </ul>
+
+        @*<div id="loadMore">Load more</div>
+        <div id="showLess">Show less</div>*@
+        @{
+            if (Model.Count() > 5)
+            {
+                <span id="loadMore" class="viewmore">Xem thêm <b></b></span>
+                <span id="showLess" class="viewmore">Rút gọn <b></b></span>
+            }
+        }
+
+
+    </aside>
+    <aside class="rightcate">
+
+        <div class="banner">
+            <a aria-label='slide' href='dtdd/oppo-f11.html' onclick="jQuery.ajax({ url: '//www.thegioididong.com/bannertracking?bid=26954&r='+ (new Date).getTime(),   async: true, cache: false });"><img class='lazy' data-src='//cdn.tgdd.vn/qcao/16_04_2019_09_32_49_380@215.png' alt='Sự kiện ra mắt Huawei P30, P30 Pro' /></a>
+        </div>
+
+
+
+
+
+        <h3 class="titlehome">Thảo luận nhiều</h3>
+        <div class="summarycomment">
+            <a href="tin-tuc/huawei-se-dan-dau-thi-truong-smartphone-trong-nam-toi-1160551.html">
+                <div>1</div>
+                <h3>Huawei tin rằng h&#227;ng sẽ dẫn đầu thị trường smartphone trong năm tới<span class="morecom"><i class="iconnews-comorg"></i>43</span></h3>
+            </a>
+            <a href="tin-tuc/oppo-f11-pro-chinh-thuc-den-tay-khach-hang-1160203.html">
+                <div>2</div>
+                <h3>OPPO F11 Pro ch&#237;nh thức đến tay kh&#225;ch h&#224;ng: “M&#224;n h&#236;nh bự nh&#236;n đ&#227; qu&#225; ha”<span class="morecom"><i class="iconnews-comorg"></i>41</span></h3>
+            </a>
+            <a href="tin-tuc/samsung-chinh-thuc-ra-mat-galaxy-a60-tai-trung-quoc-1161335.html">
+                <div>3</div>
+                <h3>Samsung ch&#237;nh thức ra mắt Galaxy A60 tại Trung Quốc<span class="morecom"><i class="iconnews-comorg"></i>35</span></h3>
+            </a>
+            <a href="tin-tuc/huawei-p30-pro-va-galaxy-s10-5g-cung-nam-giu-vi-tri-top-1-tren-dxomark-1161252.html">
+                <div>4</div>
+                <h3>Huawei P30 Pro v&#224; Galaxy S10 5G c&#249;ng nắm giữ vị tr&#237; top 1 tr&#234;n DxOMark<span class="morecom"><i class="iconnews-comorg"></i>32</span></h3>
+            </a>
+        </div>
+
+        <div class="rcm">
+            <div class="trcm">
+                <h3 class="linkproduct">TUYỂN DỤNG TẠI MWG</h3>
+                <a href="https://vieclam.thegioididong.com/">Xem thêm <span>›</span></a>
+            </div>
+            <ul class="">
+                <li>
+                    <a href="https://vieclam.thegioididong.com/tuyen-dung/chuyen-vien-dao-tao-softskill-hardskill-elearning.html">
+                        <span class="l">
+                            Chuy&#234;n Vi&#234;n Đ&#224;o Tạo ( Soft-skill, Hard-skill, E-Learning)<br />
+                            <span class="lct">TP. Hồ Ch&#237; Minh</span>
+                        </span>
+                        <span class="r">
+                            Hạn nộp<br />
+                            <span class="tm">30/04/2019</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://vieclam.thegioididong.com/tuyen-dung/tim-kiem-phat-trien-mat-bang.html">
+                        <span class="l">
+                            T&#236;m kiếm &amp; Ph&#225;t Triển Mặt Bằng<br />
+                            <span class="lct">TP. Hồ Ch&#237; Minh</span>
+                        </span>
+                        <span class="r">
+                            Hạn nộp<br />
+                            <span class="tm">01/05/2019</span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+        <a href="tin-tuc/san-pham.html" class="linkproduct">Sản phẩm mới</a>
+        <ul class="newsproduct">
+            <li>
+                <a href="tin-tuc/san-pham/oppo-find-x-165189.html">
+                    <img width="100" height="70" data-src="https://cdn.tgdd.vn/Products/Images/42/165189/oppo-find-x-1-400x400.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==" class="lazy" />
+                    <h3>OPPO Find X</h3>
+                    <p>19.990.000₫</p>
+                    <label>61 bài viết</label>
+                </a>
+            </li>
+            <li>
+                <a href="tin-tuc/san-pham/samsung-galaxy-a50-196963.html">
+                    <img width="100" height="70" data-src="https://cdn.tgdd.vn/Products/Images/42/196963/samsung-galaxy-a50-black-400x400.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==" class="lazy" />
+                    <h3>Samsung Galaxy A50</h3>
+                    <p>6.690.000₫</p>
+                    <label>38 bài viết</label>
+                </a>
+            </li>
+            <li>
+                <a href="tin-tuc/san-pham/samsung-galaxy-a50-128gb-200294.html">
+                    <img width="100" height="70" data-src="https://cdn.tgdd.vn/Products/Images/42/200294/samsung-galaxy-a50-128gb-blue-docquyen-400x400.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==" class="lazy" />
+                    <h3>Samsung Galaxy A50 128GB</h3>
+                    <p>7.690.000₫</p>
+                    <label>13 bài viết</label>
+                </a>
+            </li>
+            <li>
+                <a href="tin-tuc/san-pham/oppo-reno-200438.html">
+                    <img width="100" height="70" data-src="https://cdn.tgdd.vn/Products/Images/42/200438/oppo-reno-1-400x400.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==" class="lazy" />
+                    <h3>OPPO Reno</h3>
+                    <p></p>
+                    <label>11 bài viết</label>
+                </a>
+            </li>
+        </ul>
+
+
+        <a href="tin-tuc/tin-khuyen-mai/31.html" class="linkproduct">Khuyến mãi</a>
+        <ul class="newspromotion">
+            <li>
+                <a href="tin-tuc/kham-pha-samsung-galaxy-a10-nhan-qua-tang-len-den-50-trieu-dong-1160142.html">
+                    <img width="380" height="215" data-src="https://cdn.tgdd.vn/Files/2019/04/11/1160142/galaxya10_800x533-600x400.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==" class="lazy" />
+                    <h3>KẾT QUẢ: Game Kh&#225;m ph&#225; Samsung Galaxy A10, nhận qu&#224; l&#234;n đến 50 triệu</h3>
+                </a>
+            </li>
+            <li>
+                <a href="tin-tuc/sam-laptop-moi-cay-phim-ngay-le-nhan-luon-ma-giam-gia-1160472.html">
+                    <img width="380" height="215" data-src="https://cdn.tgdd.vn/Files/2019/04/13/1160472/laptop-3_800x450-300x200.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==" class="lazy" />
+                    <h3>Sắm laptop mới c&#224;y phim ng&#224;y lễ, ng&#224;y cuối nhận lu&#244;n m&#227; giảm gi&#225;</h3>
+                </a>
+            </li>
+            <li>
+                <a href="tin-tuc/gio-to-vua-hung-san-lung-ma-giam-gia-khung-the-gioi-di-dong-1160189.html">
+                    <img width="380" height="215" data-src="https://cdn.tgdd.vn/Files/2019/04/12/1160189/muaonlinegiamgia_800x450-300x200.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==" class="lazy" />
+                    <h3>Giỗ tổ vua H&#249;ng: Săn ngay m&#227; giảm gi&#225; đến 15% để &quot;thay Ph&#244;n, đổi L&#225;p&quot; mới</h3>
+                </a>
+            </li>
+            <li>
+                <a href="tin-tuc/mua-dien-thoai-vsmart-don-ngay-co-hoi-tro-thanh-trieu-phu-1148618.html">
+                    <img width="380" height="215" data-src="https://cdn.tgdd.vn/Files/2019/02/07/1148618/2018-12-1804.50.304_800x450-300x200.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==" class="lazy" />
+                    <h3>Mua điện thoại Vsmart, đ&#243;n ngay cơ hội trở th&#224;nh triệu ph&#250;</h3>
+                </a>
+            </li>
+            <li>
+                <a href="tin-tuc/sam-laptop-asus-tai-the-gioi-di-dong-nhan-co-hoi-trung-xe-may-1158101.html">
+                    <img width="380" height="215" data-src="https://cdn.tgdd.vn/Files/2019/04/01/1158101/asus_800x450-300x200.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX6+vqsEtnpAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==" class="lazy" />
+                    <h3>Sắm laptop Asus tại Thế Giới Di Động, nhận cơ hội tr&#250;ng xe Vision</h3>
+                </a>
+            </li>
+        </ul>
+
+        <h3 class="titlehome">Sự kiện</h3>
+        <ul class="summaryevent">
+            <li>
+                <a href="tin-tuc/su-kien/trinh-lang-oppo-reno-224.html">
+                    <div class="calen">
+                        <i class="iconnews-calendar"></i>
+                        <strong>24/04</strong>
+                    </div>
+                    <h3>Tr&#236;nh l&#224;ng OPPO Reno</h3>
+                    <span class="ddevent"><i class="iconnews-dd"></i>Zurich, Thụy Sĩ</span>
+                </a>
+            </li>
+            <li>
+                <a href="tin-tuc/su-kien/google-ra-mat-pixel-3a-3a-xl-227.html">
+                    <div class="calen">
+                        <i class="iconnews-calendar"></i>
+                        <strong>07/05</strong>
+                    </div>
+                    <h3>Google ra mắt Pixel 3a &amp; 3a XL </h3>
+                    <span class="ddevent"><i class="iconnews-dd"></i>Mỹ</span>
+                </a>
+            </li>
+            <li>
+                <a href="tin-tuc/su-kien/ra-mat-galaxy-note-10-219.html">
+                    <div class="calen">
+                        <i class="iconnews-calendar"></i>
+                        <strong>01/08</strong>
+                    </div>
+                    <h3>Ra mắt Galaxy Note 10</h3>
+                    <span class="ddevent"><i class="iconnews-dd"></i>Mỹ</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="clr"></div>
+    </aside>
+    <ul class="menu mnfoo">
+        <li><a href="tin-tuc.html" class=actmenu>Tin mới</a></li>
+        <li><a href="tin-tuc/san-pham.html">Sản phẩm mới</a></li>
+        <li><a href="tin-tuc/danh-gia/210.html">Đánh giá</a></li>
+        <li><a href="tin-tuc/meo-hay/1036.html">Mẹo hay</a></li>
+        <li><a href="tin-tuc/thi-truong/1141.html">Thị trường</a></li>
+        <li><a href="tin-tuc/cuoc-song-so/1717.html">Cuộc sống số</a></li>
+        <li><a href="tin-tuc/game-ung-dung/1273.html">Game - App</a></li>
+        <li><a href="tin-tuc/su-kien.html">Sự kiện</a></li>
+        <li><a href="tin-tuc/laptop/1269.html">Laptop</a></li>
+        <li><a href="tin-tuc/do-choi-cong-nghe/1700.html">Đồ chơi công nghệ</a></li>
+        <li><a href="tin-tuc/e-magazine/1701.html">E-Magazine</a><label class="menulabel ">Mới</label></li>
+    </ul>
+</section>
+
+<script defer="defer" async="async" src="~/js/newsScript.js"></script>
+<script>
+    $(function () {
+        size_li = $("#myList li").size();
+        x = 3;
+        $('#myList li:lt(' + x + ')').show();
+        $('#loadMore').click(function () {
+            x = (x + 5 <= size_li) ? x + 5 : size_li;
+            $('#myList li:lt(' + x + ')').show();
+            $('#showLess').css('display','block');
+            if (x == size_li) {
+                $('#loadMore').hide();
+            }
+        });
+        $('#showLess').click(function () {
+            x = (x - 5 < 0) ? 3 : x - 5;
+            $('#myList li').not(':lt(' + x + ')').hide();
+            $('#loadMore').show();
+            $('#showLess').css('display','block');
+            if (x == 3) {
+                $('#showLess').hide();
+            }
+        });
+    });
+</script>
