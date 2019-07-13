@@ -34,7 +34,11 @@ namespace WebApplication1.Areas.Admin.Controllers
             }
             return View(banhang);
         }
-
+        public class TrangThaiDonHangg
+        {
+            public int id { get; set; }
+            public int ten { get; set; }
+        }
         // GET: Admin/banhangss/Create
         public ActionResult Create()
         {

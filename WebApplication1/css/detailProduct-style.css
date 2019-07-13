@@ -9111,3 +9111,11 @@ label.lspro b {
     .cboxSlideshow_off #cboxSlideshow:hover {
         background-position: -125px 0px;
     }
+
+.my-buy-now {
+    border: none;
+    width: 100%;
+}
+.my-buy-now:hover {
+    cursor: pointer;
+}

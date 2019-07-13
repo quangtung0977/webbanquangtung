@@ -187,17 +187,11 @@
     <Compile Include="Areas\Admin\Controllers\bannersController.cs" />
     <Compile Include="Areas\Admin\Controllers\chitietdonhangssController.cs" />
     <Compile Include="Areas\Admin\Controllers\GioiThieuController.cs" />
-    <Compile Include="Areas\Admin\Controllers\HanhTrinhController.cs" />
-    <Compile Include="Areas\Admin\Controllers\HinhAnhController.cs" />
     <Compile Include="Areas\Admin\Controllers\LienHeController.cs" />
-    <Compile Include="Areas\Admin\Controllers\LoaiHanhTrinhController.cs" />
-    <Compile Include="Areas\Admin\Controllers\LoaiHinhAnhController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoaiTinTucController.cs" />
-    <Compile Include="Areas\Admin\Controllers\NhomThanhVienController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductCategoriesController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductsController.cs" />
     <Compile Include="Areas\Admin\Controllers\SharedController.cs" />
-    <Compile Include="Areas\Admin\Controllers\TestDevExtremeController.cs" />
     <Compile Include="Areas\Admin\Controllers\ThanhVienController.cs" />
     <Compile Include="Areas\Admin\Controllers\ThongTinCoDinhController.cs" />
     <Compile Include="Areas\Admin\Controllers\TinTucController.cs" />
@@ -1222,6 +1216,7 @@
     <Content Include="Content\mobile\images\V4\iconmobile%402x.png" />
     <Content Include="Content\mobile\images\V4\logosprite%402x.png" />
     <Content Include="css\chatcore.css" />
+    <Content Include="css\customstyle.css" />
     <Content Include="css\detailProduct-style.css" />
     <Content Include="css\puchase-style.css" />
     <Content Include="css\home-style.css" />
@@ -1271,36 +1266,11 @@
     <Content Include="Areas\Admin\Assets\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Areas\Admin\Assets\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Areas\Admin\Assets\fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="Areas\Admin\Views\HanhTrinh\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\HanhTrinh\Delete.cshtml" />
-    <Content Include="Areas\Admin\Views\HanhTrinh\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\HanhTrinh\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\HanhTrinh\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\LoaiHanhTrinh\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\LoaiHanhTrinh\Delete.cshtml" />
-    <Content Include="Areas\Admin\Views\LoaiHanhTrinh\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\LoaiHanhTrinh\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\LoaiHanhTrinh\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\HinhAnh\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\HinhAnh\Delete.cshtml" />
-    <Content Include="Areas\Admin\Views\HinhAnh\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\HinhAnh\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\HinhAnh\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\LoaiHinhAnh\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\LoaiHinhAnh\Delete.cshtml" />
-    <Content Include="Areas\Admin\Views\LoaiHinhAnh\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\LoaiHinhAnh\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\LoaiHinhAnh\Index.cshtml" />
     <Content Include="Areas\Admin\Views\LoaiTinTuc\Create.cshtml" />
     <Content Include="Areas\Admin\Views\LoaiTinTuc\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\LoaiTinTuc\Details.cshtml" />
     <Content Include="Areas\Admin\Views\LoaiTinTuc\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\LoaiTinTuc\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\NhomThanhVien\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\NhomThanhVien\Delete.cshtml" />
-    <Content Include="Areas\Admin\Views\NhomThanhVien\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\NhomThanhVien\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\NhomThanhVien\Index.cshtml" />
     <Content Include="Areas\Admin\Views\banners\Create.cshtml" />
     <Content Include="Areas\Admin\Views\banners\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\banners\Details.cshtml" />
@@ -1352,13 +1322,11 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
     <Content Include="Areas\Admin\Views\Shared\_LoginName.cshtml" />
-    <Content Include="Areas\Admin\Views\LoaiHinhAnh\UploadImage.cshtml" />
     <Content Include="Areas\Admin\Views\admin_account\Create.cshtml" />
     <Content Include="Areas\Admin\Views\admin_account\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\admin_account\Details.cshtml" />
     <Content Include="Areas\Admin\Views\admin_account\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\admin_account\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\TestDevExtreme\Index.cshtml" />
     <Content Include="Content\desktop\images\b2b\SamsungSharpSans-Bold_SMCPS.ttf" />
     <Content Include="Content\desktop\images\b2b\SamsungSharpSans-Medium_SMCP.ttf" />
     <Content Include="images\cdn.tgdd.vn\qcao\16_04_2019_15_55_38_Note-8-398-110.png" />
@@ -1512,7 +1480,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>59638</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:59638/</IISUrl>
+          <IISUrl>http://localhost:59639/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

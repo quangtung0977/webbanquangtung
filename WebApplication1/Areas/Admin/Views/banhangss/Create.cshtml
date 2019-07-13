@@ -60,7 +60,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.trangthaidonhang, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.trangthaidonhang, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.trangthaidonhang, new { htmlAttributes = new { @class = "form-control" } }) (0: Đơn hàng mới, 1: Hoàn thành, -1: Hủy bỏ)
                 @Html.ValidationMessageFor(model => model.trangthaidonhang, "", new { @class = "text-danger" })
             </div>
         </div>

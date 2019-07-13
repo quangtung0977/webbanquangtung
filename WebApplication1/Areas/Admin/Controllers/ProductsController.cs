@@ -49,7 +49,7 @@ namespace WebApplication1.Areas.Admin.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [ValidateInput(false)]
-        public ActionResult Create([Bind(Include = "id,ten,loaisanpham,ngaytao,ngaycapnhat,nguoitao,motasoluoc,motachitiet,daxoa,ghichu,hienthi,hinhdaidien,hinhanhsanpham,thutuhien,gianiemyet,giaban,mathuonghieu")] sanpham sanpham)
+        public ActionResult Create([Bind(Include = "id,ten,loaisanpham,ngaytao,ngaycapnhat,nguoitao,motasoluoc,motachitiet,daxoa,ghichu,hienthi,hinhdaidien,hinhanhsanpham,thutuhien,gianiemyet,giaban,mathuonghieu")] sanpham sanpham, string[] addmore)
         {
             if (Session["User"] == null)
             {
