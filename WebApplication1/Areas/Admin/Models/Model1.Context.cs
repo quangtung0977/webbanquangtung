@@ -43,5 +43,7 @@ namespace WebApplication1.Areas.Admin.Models
         public virtual DbSet<HinhAnhChoChuDe> HinhAnhChoChuDes { get; set; }
         public virtual DbSet<loaisanpham> loaisanphams { get; set; }
         public virtual DbSet<sanpham> sanphams { get; set; }
+        public virtual DbSet<banhang> banhangs { get; set; }
+        public virtual DbSet<chitietdonhang> chitietdonhangs { get; set; }
     }
 }

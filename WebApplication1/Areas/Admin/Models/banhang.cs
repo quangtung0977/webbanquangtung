@@ -12,33 +12,25 @@ namespace WebApplication1.Areas.Admin.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class sanpham
+    public partial class banhang
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public sanpham()
+        public banhang()
         {
             this.chitietdonhangs = new HashSet<chitietdonhang>();
         }
     
-        public string id { get; set; }
-        public string ten { get; set; }
-        public Nullable<int> loaisanpham { get; set; }
-        public Nullable<System.DateTime> ngaytao { get; set; }
-        public Nullable<System.DateTime> ngaycapnhat { get; set; }
-        public Nullable<int> nguoitao { get; set; }
-        public string motasoluoc { get; set; }
-        public string motachitiet { get; set; }
-        public Nullable<bool> daxoa { get; set; }
+        public int id { get; set; }
+        public string madonbanhang { get; set; }
+        public Nullable<int> tongtien { get; set; }
+        public string tenKH { get; set; }
+        public string diachiKH { get; set; }
+        public string dienthoaiKH { get; set; }
         public string ghichu { get; set; }
-        public Nullable<bool> hienthi { get; set; }
-        public string hinhdaidien { get; set; }
-        public string hinhanhsanpham { get; set; }
-        public Nullable<int> thutuhien { get; set; }
-        public Nullable<int> gianiemyet { get; set; }
-        public Nullable<int> giaban { get; set; }
-        public Nullable<int> mathuonghieu { get; set; }
+        public Nullable<int> trangthaidonhang { get; set; }
+        public Nullable<System.DateTime> ngaydathang { get; set; }
+        public Nullable<System.DateTime> ngaycapnhat { get; set; }
     
-        public virtual loaisanpham loaisanpham1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<chitietdonhang> chitietdonhangs { get; set; }
     }

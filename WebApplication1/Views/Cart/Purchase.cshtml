@@ -21,62 +21,62 @@
             </span>
         </div>
         @*<form id="formtest" novalidate="novalidate">*@
-            <input name="__RequestVerificationToken" type="hidden" value="CKe7pOjbKhMoz8dqsPg6Xh_85pnBrzda9-w5NkLYM6SS_l3TnPvp7sFSgSg0o8aW36fkgX0g4oLy7uxsf8LomLGYbBg1">
+        <input name="__RequestVerificationToken" type="hidden" value="CKe7pOjbKhMoz8dqsPg6Xh_85pnBrzda9-w5NkLYM6SS_l3TnPvp7sFSgSg0o8aW36fkgX0g4oLy7uxsf8LomLGYbBg1">
 
-            <input type="hidden" id="showonehour" name="showonehour" value="true">
-            <input type="hidden" id="iscatelaptop" name="iscatelaptop" value="false">
-            <style>
-                #showonehour[value=true] ~ .area_other .area_address .onehour {
-                    display: block !important;
-                }
-            </style>
-            @{
-                if (Model.Count() > 0)
-                {
-                    <div class="detail_cart">
-                        <div class="clr"></div>
-                        <ul class="listorder">
-                            @{
-                                foreach (var item in Model)
-                                {
-                                    <li id="@item.id">
-                                        <div class="colimg">
-                                            <a href="/dtdd/huawei-y9-prime-2019">
-                                                <img width="55" src="@item.urlhinh">
-                                            </a>
-                                            @using (Html.BeginForm("XoaSanPhamGioHang", "Cart"))
-                                            {
-                                                <input type="hidden" name="idsp" value="@item.id" />
+        <input type="hidden" id="showonehour" name="showonehour" value="true">
+        <input type="hidden" id="iscatelaptop" name="iscatelaptop" value="false">
+        <style>
+            #showonehour[value=true] ~ .area_other .area_address .onehour {
+                display: block !important;
+            }
+        </style>
+        @{
+            if (Model.Count() > 0)
+            {
+                <div class="detail_cart">
+                    <div class="clr"></div>
+                    <ul class="listorder">
+                        @{
+                            foreach (var item in Model)
+                            {
+                                <li id="@item.id">
+                                    <div class="colimg">
+                                        <a href="/dtdd/huawei-y9-prime-2019">
+                                            <img width="55" src="@item.urlhinh">
+                                        </a>
+                                        @using (Html.BeginForm("XoaSanPhamGioHang", "Cart"))
+                                        {
+                                            <input type="hidden" name="idsp" value="@item.id" />
                                                 <button type="submit" class="delete"><span></span>Xóa</button>
-                                            }
-                                        </div>
-                                        <div class="colinfo">
-                                            <strong>@string.Format("{0:n0}", item.gia)₫</strong>
-                                            <a href="/dtdd/huawei-y9-prime-2019">@item.ten</a>
-                                            <div class="title">
-                                                Số lượng: @item.soluong
-                                            </div>
-                                            <div>
-                                            </div>
-                                            <div class="clr"></div>
-                                            <input type="hidden" class="hdIsBuyComBo" name="ListNone[0].IsBuyComBo" value="false">
-                                        </div>
-                                    </li>
-                                }
-                            }
-                        </ul>
-                        <div class="area_total">
-                            <div>
-                                <div class="shipping_home none" style="display: block;">
-                                    <div class="total">
-                                        <b>Tổng tiền:</b>
-
-                                        <strong>@string.Format("{0:n0}", ViewBag.tongtien)₫</strong>
+                                        }
                                     </div>
+                                    <div class="colinfo">
+                                        <strong>@string.Format("{0:n0}", item.gia)₫</strong>
+                                        <a href="/dtdd/huawei-y9-prime-2019">@item.ten</a>
+                                        <div class="title">
+                                            Số lượng: @item.soluong
+                                        </div>
+                                        <div>
+                                        </div>
+                                        <div class="clr"></div>
+                                        <input type="hidden" class="hdIsBuyComBo" name="ListNone[0].IsBuyComBo" value="false">
+                                    </div>
+                                </li>
+                            }
+                        }
+                    </ul>
+                    <div class="area_total">
+                        <div>
+                            <div class="shipping_home none" style="display: block;">
+                                <div class="total">
+                                    <b>Tổng tiền:</b>
+
+                                    <strong>@string.Format("{0:n0}", ViewBag.tongtien)₫</strong>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
                     <div class="infouser none">
                         <div class="malefemale">
                             <label class="anh choose"><i class="iconmobile-opt"></i>&nbsp;Anh</label>
@@ -96,6 +96,7 @@
                         </div>
                     </div>
                     <div class="area_other">
+
                         <div class="textnote"><b>Thông tin giao hàng</b></div>
 
                         <div class="area_market " style="display: none;">
@@ -169,45 +170,36 @@
                                     <span class="csdot"></span>
                                 </span>
                             </div>
-                            <input type="text" class="homenumber OrderNoteHome saveinfo" name="OrderNoteHome" placeholder="Họ tên người nhận hàng" maxlength="300">
-                            <input type="text" class="homenumber OrderNoteHome saveinfo" name="OrderNoteHome" placeholder="Địa chỉ" maxlength="300">
-                            <input type="text" class="homenumber OrderNoteHome saveinfo" name="OrderNoteHome" placeholder="Số điện thoại" maxlength="300">
+                            @using (Html.BeginForm("TienHanhDatHang", "Cart"))
+                            {
+                                <input type="text" class="homenumber OrderNoteHome saveinfo" name="tenKH" placeholder="Họ tên người nhận hàng" maxlength="300">
+                                <input type="text" class="homenumber OrderNoteHome saveinfo" name="diachi" placeholder="Địa chỉ" maxlength="300">
+                                <input type="text" class="homenumber OrderNoteHome saveinfo" name="sodienthoai" placeholder="Số điện thoại" maxlength="300">
+                                <div class="showtimeship_address">
+                                </div>
+                                <input type="text" class="homenumber OrderNoteHome saveinfo" name="ghichu" placeholder="Yêu cầu khác (không bắt buộc)" maxlength="300">
+                                <input data-val="true" data-val-number="The field IsTechSupportShiper must be a number." data-val-required="The IsTechSupportShiper field is required." id="IsTechSupportShiper" name="IsTechSupportShiper" type="hidden" value="0">            <div class="clr"></div>
+                                <div class="clr"></div>
 
-
-                            <div class="showtimeship_address">
-                            </div>
-                            <input type="text" class="homenumber OrderNoteHome saveinfo" name="OrderNoteHome" placeholder="Yêu cầu khác (không bắt buộc)" maxlength="300">
-                            <input data-val="true" data-val-number="The field IsTechSupportShiper must be a number." data-val-required="The IsTechSupportShiper field is required." id="IsTechSupportShiper" name="IsTechSupportShiper" type="hidden" value="0">            <div class="clr"></div>
-                            <div class="clr"></div>
-                        </div>
-
-                    </div>
-                    <div class="area_secur captcha " style="display:none;">
-                        <span>Để tiếp tục đặt hàng, vui lòng nhập mã bảo mật</span>
-                        <div class="capcha">
-                        </div>
-                        <div class="entercapcha">
-                            <input class="inputcode" name="Captcha" type="tel" maxlength="4" placeholder="Nhập mã bảo mật">
+                                <button type="submit" class="payoffline">
+                                    Tiến hành đặt hàng
+                                </button>
+                            }
                         </div>
                     </div>
-                    <div class="message"></div>
-                    <div class="choosepayment">
-                        <a href="javascript:void(0)" class="payoffline">Tiến hành đặt hàng</a>
-
-                    </div>
-                }
-                else
-                {
-                    <div class="detail_cart" style="text-align:center; height:400px; display:flex; align-items:center">
-                        <div style="width:100%;text-align:center">
-                            <img src="~/images/giohangtrong.png" width="200" height="200" />
-                            <br />
-                            <span>Bạn chưa đặt món hàng nào.</span>
-                        </div>
-                    </div>
-                }
-            }
-            <div class="clr"></div>
+                            }
+                            else
+                            {
+                                <div class="detail_cart" style="text-align:center; height:400px; display:flex; align-items:center">
+                                    <div style="width:100%;text-align:center">
+                                        <img src="~/images/giohangtrong.png" width="200" height="200" />
+                                        <br />
+                                        <span>Bạn chưa đặt món hàng nào.</span>
+                                    </div>
+                                </div>
+                            }
+        }
+        <div class="clr"></div>
         @*</form>*@
     </div>
     <p class="provision">Bằng cách đặt hàng, bạn đồng ý với <a href="/tos" target="_blank">Điều khoản sử dụng</a> của Thegioididong</p>

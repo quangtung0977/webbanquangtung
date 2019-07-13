@@ -41,6 +41,10 @@
         <EntityTypeShape EntityType="WebApplication1Model.sanpham" Width="1.5" PointX="5.375" PointY="0.75" />
         <AssociationConnector Association="WebApplication1Model.FK_HinhAnhChoChuDe_admin_loaihinhanh" />
         <AssociationConnector Association="WebApplication1Model.FK_sanpham_loaisanpham" />
+        <EntityTypeShape EntityType="WebApplication1Model.banhang" Width="1.5" PointX="5.375" PointY="8.5" />
+        <EntityTypeShape EntityType="WebApplication1Model.chitietdonhang" Width="1.5" PointX="7.625" PointY="1.75" />
+        <AssociationConnector Association="WebApplication1Model.FK_chitietdonhang_banhang" />
+        <AssociationConnector Association="WebApplication1Model.FK_chitietdonhang_chitietdonhang" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -542,4 +542,10 @@ namespace WebApplication1.Areas.Admin.Models
         public Nullable<int> mathuonghieu { get; set; }
         public virtual loaisanpham loaisanpham1 { get; set; }
     }
+    public enum TrangThaiDonHang
+    {
+        DaXoa = -1,
+        DonHangmoi = 0,
+        HoanThanh = 1,
+    }
 }

@@ -185,29 +185,18 @@
                         </ul>
                     </li>
 
-                    @*<li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo">Quản lý hành trình <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo" class="collapse">
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#groupbanhang">Quản lý bán hàng <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="groupbanhang" class="collapse">
                             <li>
-                                <a href="@Url.Action("Index", "LoaiHanhTrinh" ,new { Area = "Admin" })">Loại hành trình</a>
+                                <a href="@Url.Action("Index", "banhangss" ,new { Area = "Admin" })">Quản lý đơn bán hàng</a>
                             </li>
                             <li id="ad_hanhtrinh">
-                                <a href="@Url.Action("Index", "HanhTrinh" ,new { Area = "Admin" })">Hành trình</a>
+                                <a href="@Url.Action("Index", "chitietdonhangss" ,new { Area = "Admin" })">Quản lý chi tiết đơn hàng</a>
                             </li>
                         </ul>
-                    </li>*@
+                    </li>
 
-                    @*<li>
-                        <a href="@Url.Action("Index", "GioiThieu" ,new { Area = "Admin" })">Giới thiệu</a>
-                    </li>*@
-
-                    @*<li>
-                        <a href="@Url.Action("Index", "LienHe" ,new { Area = "Admin" })">Liên hệ</a>
-                    </li>*@
-
-                    @*<li>
-                        <a href="@Url.Action("Edit", "ThongTinCoDinh",new { Area = "Admin",id=-1 })">Thông tin cố định</a>
-                    </li>*@
                     <li>
                         <a href="@Url.Action("Logout", "Account",new { Area = "Admin"})">Thoát</a>
                     </li>

@@ -221,6 +221,21 @@
           <Property Name="motasoluoc_en" Type="ntext" />
           <Property Name="thutuhien" Type="int" />
         </EntityType>
+        <EntityType Name="banhang">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="madonbanhang" Type="nvarchar" MaxLength="50" />
+          <Property Name="tongtien" Type="int" />
+          <Property Name="tenKH" Type="nvarchar" MaxLength="500" />
+          <Property Name="diachiKH" Type="nvarchar" MaxLength="500" />
+          <Property Name="dienthoaiKH" Type="nvarchar" MaxLength="500" />
+          <Property Name="ghichu" Type="ntext" />
+          <Property Name="trangthaidonhang" Type="int" />
+          <Property Name="ngaydathang" Type="datetime" />
+          <Property Name="ngaycapnhat" Type="datetime" />
+        </EntityType>
         <EntityType Name="banner">
           <Key>
             <PropertyRef Name="id" />
@@ -237,6 +252,17 @@
           <Property Name="thutuhien" Type="int" />
           <Property Name="daxoa" Type="bit" />
           <Property Name="loaibanner" Type="int" />
+        </EntityType>
+        <EntityType Name="chitietdonhang">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="iddonbanhang" Type="int" />
+          <Property Name="idsp" Type="varchar" MaxLength="20" />
+          <Property Name="soluong" Type="int" />
+          <Property Name="giaban" Type="int" />
+          <Property Name="tensanpham" Type="ntext" />
         </EntityType>
         <EntityType Name="HinhAnhChoChuDe">
           <Key>
@@ -485,6 +511,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_chitietdonhang_banhang">
+          <End Role="banhang" Type="Self.banhang" Multiplicity="0..1" />
+          <End Role="chitietdonhang" Type="Self.chitietdonhang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="banhang">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="chitietdonhang">
+              <PropertyRef Name="iddonbanhang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_chitietdonhang_chitietdonhang">
+          <End Role="sanpham" Type="Self.sanpham" Multiplicity="0..1" />
+          <End Role="chitietdonhang" Type="Self.chitietdonhang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sanpham">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="chitietdonhang">
+              <PropertyRef Name="idsp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_HinhAnhChoChuDe_admin_loaihinhanh">
           <End Role="admin_loaihinhanh" Type="Self.admin_loaihinhanh" Multiplicity="0..1" />
           <End Role="HinhAnhChoChuDe" Type="Self.HinhAnhChoChuDe" Multiplicity="*" />
@@ -523,7 +573,9 @@
           <EntitySet Name="admin_thanhvien" EntityType="Self.admin_thanhvien" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="admin_thongtincodinh" EntityType="Self.admin_thongtincodinh" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="admin_tintuc" EntityType="Self.admin_tintuc" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="banhang" EntityType="Self.banhang" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="banner" EntityType="Self.banner" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="chitietdonhang" EntityType="Self.chitietdonhang" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HinhAnhChoChuDe" EntityType="Self.HinhAnhChoChuDe" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="loaibanner" EntityType="Self.loaibanner" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="loaisanpham" EntityType="Self.loaisanpham" Schema="dbo" store:Type="Tables" />
@@ -591,6 +643,14 @@
           <AssociationSet Name="FK_banner_loaibanner" Association="Self.FK_banner_loaibanner">
             <End Role="loaibanner" EntitySet="loaibanner" />
             <End Role="banner" EntitySet="banner" />
+          </AssociationSet>
+          <AssociationSet Name="FK_chitietdonhang_banhang" Association="Self.FK_chitietdonhang_banhang">
+            <End Role="banhang" EntitySet="banhang" />
+            <End Role="chitietdonhang" EntitySet="chitietdonhang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_chitietdonhang_chitietdonhang" Association="Self.FK_chitietdonhang_chitietdonhang">
+            <End Role="sanpham" EntitySet="sanpham" />
+            <End Role="chitietdonhang" EntitySet="chitietdonhang" />
           </AssociationSet>
           <AssociationSet Name="FK_HinhAnhChoChuDe_admin_loaihinhanh" Association="Self.FK_HinhAnhChoChuDe_admin_loaihinhanh">
             <End Role="admin_loaihinhanh" EntitySet="admin_loaihinhanh" />
@@ -1152,6 +1212,16 @@
             <End Role="loaisanpham" EntitySet="loaisanphams" />
             <End Role="sanpham" EntitySet="sanphams" />
           </AssociationSet>
+          <EntitySet Name="banhangs" EntityType="WebApplication1Model.banhang" />
+          <EntitySet Name="chitietdonhangs" EntityType="WebApplication1Model.chitietdonhang" />
+          <AssociationSet Name="FK_chitietdonhang_banhang" Association="WebApplication1Model.FK_chitietdonhang_banhang">
+            <End Role="banhang" EntitySet="banhangs" />
+            <End Role="chitietdonhang" EntitySet="chitietdonhangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_chitietdonhang_chitietdonhang" Association="WebApplication1Model.FK_chitietdonhang_chitietdonhang">
+            <End Role="sanpham" EntitySet="sanphams" />
+            <End Role="chitietdonhang" EntitySet="chitietdonhangs" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="admin_baiviethuongdandangkythanhvien">
           <Key>
@@ -1212,6 +1282,7 @@
           <Property Name="giaban" Type="Int32" />
           <Property Name="mathuonghieu" Type="Int32" />
           <NavigationProperty Name="loaisanpham1" Relationship="WebApplication1Model.FK_sanpham_loaisanpham" FromRole="sanpham" ToRole="loaisanpham" />
+          <NavigationProperty Name="chitietdonhangs" Relationship="WebApplication1Model.FK_chitietdonhang_chitietdonhang" FromRole="sanpham" ToRole="chitietdonhang" />
         </EntityType>
         <Association Name="FK_HinhAnhChoChuDe_admin_loaihinhanh">
           <End Type="WebApplication1Model.admin_loaihinhanh" Role="admin_loaihinhanh" Multiplicity="0..1" />
@@ -1234,6 +1305,59 @@
             </Principal>
             <Dependent Role="sanpham">
               <PropertyRef Name="loaisanpham" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="banhang">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="madonbanhang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="tongtien" Type="Int32" />
+          <Property Name="tenKH" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="diachiKH" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="dienthoaiKH" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ghichu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="trangthaidonhang" Type="Int32" />
+          <Property Name="ngaydathang" Type="DateTime" Precision="3" />
+          <Property Name="ngaycapnhat" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="chitietdonhangs" Relationship="WebApplication1Model.FK_chitietdonhang_banhang" FromRole="banhang" ToRole="chitietdonhang" />
+        </EntityType>
+        <EntityType Name="chitietdonhang">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="iddonbanhang" Type="Int32" />
+          <Property Name="idsp" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="soluong" Type="Int32" />
+          <Property Name="giaban" Type="Int32" />
+          <Property Name="tensanpham" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="banhang" Relationship="WebApplication1Model.FK_chitietdonhang_banhang" FromRole="chitietdonhang" ToRole="banhang" />
+          <NavigationProperty Name="sanpham" Relationship="WebApplication1Model.FK_chitietdonhang_chitietdonhang" FromRole="chitietdonhang" ToRole="sanpham" />
+        </EntityType>
+        <Association Name="FK_chitietdonhang_banhang">
+          <End Type="WebApplication1Model.banhang" Role="banhang" Multiplicity="0..1" />
+          <End Type="WebApplication1Model.chitietdonhang" Role="chitietdonhang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="banhang">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="chitietdonhang">
+              <PropertyRef Name="iddonbanhang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_chitietdonhang_chitietdonhang">
+          <End Type="WebApplication1Model.sanpham" Role="sanpham" Multiplicity="0..1" />
+          <End Type="WebApplication1Model.chitietdonhang" Role="chitietdonhang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sanpham">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="chitietdonhang">
+              <PropertyRef Name="idsp" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1545,6 +1669,34 @@
                 <ScalarProperty Name="ngaytao" ColumnName="ngaytao" />
                 <ScalarProperty Name="loaisanpham" ColumnName="loaisanpham" />
                 <ScalarProperty Name="ten" ColumnName="ten" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="banhangs">
+            <EntityTypeMapping TypeName="WebApplication1Model.banhang">
+              <MappingFragment StoreEntitySet="banhang">
+                <ScalarProperty Name="ngaycapnhat" ColumnName="ngaycapnhat" />
+                <ScalarProperty Name="ngaydathang" ColumnName="ngaydathang" />
+                <ScalarProperty Name="trangthaidonhang" ColumnName="trangthaidonhang" />
+                <ScalarProperty Name="ghichu" ColumnName="ghichu" />
+                <ScalarProperty Name="dienthoaiKH" ColumnName="dienthoaiKH" />
+                <ScalarProperty Name="diachiKH" ColumnName="diachiKH" />
+                <ScalarProperty Name="tenKH" ColumnName="tenKH" />
+                <ScalarProperty Name="tongtien" ColumnName="tongtien" />
+                <ScalarProperty Name="madonbanhang" ColumnName="madonbanhang" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="chitietdonhangs">
+            <EntityTypeMapping TypeName="WebApplication1Model.chitietdonhang">
+              <MappingFragment StoreEntitySet="chitietdonhang">
+                <ScalarProperty Name="tensanpham" ColumnName="tensanpham" />
+                <ScalarProperty Name="giaban" ColumnName="giaban" />
+                <ScalarProperty Name="soluong" ColumnName="soluong" />
+                <ScalarProperty Name="idsp" ColumnName="idsp" />
+                <ScalarProperty Name="iddonbanhang" ColumnName="iddonbanhang" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
