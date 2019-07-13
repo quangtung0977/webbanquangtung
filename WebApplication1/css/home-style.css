@@ -48,7 +48,7 @@ header {
     position: absolute;
     top: 0;
     min-width: 1024px;
-    background: #fed700;
+    background: #c69c9c;
     width: 100%;
     height: 55px;
     z-index: 3
@@ -76,7 +76,7 @@ footer {
     min-width: 1024px;
     width: 100%;
     height: 55px;
-    background: #000;
+    /*background: #000;*/
     margin: auto;
     position: relative;
     display: block
@@ -129,7 +129,7 @@ footer {
 
 nav {
     width: 780px;
-    background: #fed700;
+    /*background: #fed700;*/
     margin: 0;
     padding: 0;
     display: table;
@@ -144,7 +144,7 @@ nav {
         height: 44px;
         padding: 3px 0 4px;
         color: #000;
-        background: #fed700;
+        /*background: #008080;*/
         font-size: 11px;
         text-align: center;
         text-transform: uppercase;
@@ -1171,7 +1171,7 @@ section {
 
 .homebanner {
     float: left;
-    width: 65.834%;
+    width: 100%;
     height: 354px;
     overflow: hidden;
     position: relative;
@@ -2308,4 +2308,11 @@ section {
     .homenews h2 a {
         font-size: 12px
     }
+}
+.my-header {
+    color: #000;
+}
+header a {
+    color: #000;
+    font-weight: bold;
 }

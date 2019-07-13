@@ -2,13 +2,10 @@
 
 <header>
     <div class="wrap-main">
-        <a class="logo my-header" title="Về trang chủ" href="/" aria-label="logo">
-           LOGO
+        <a class="my-header" style="float:left" title="Về trang chủ" href="/" aria-label="logo">
+           QT-Shop
         </a>
-        <form id="search-site" action="https://www.thegioididong.com/tim-kiem" method="get" autocomplete="off">
-            <input class="topinput" id="search-keyword" name="key" type="text" aria-label="Bạn tìm gì..." placeholder="Bạn tìm gì..." autocomplete="off" onkeyup="SuggestSearch(event,this, 0);" maxlength="50" />
-            <button class="btntop" type="submit" aria-label="tìm kiếm"><i class="icontgdd-topsearch"></i></button>
-        </form>
+
         <nav>
             @foreach (var item in Model)
             {
@@ -19,16 +16,15 @@
             <a href="@Url.Action("Index", "News")" class="news" title="Tin công nghệ">
                 <i class="icontgdd-news"></i><span>Tin</span>Công Nghệ
             </a>
-            <a href="#" class="ask" title="Hỏi đáp">
+            <a  href="#" class="ask" style="visibility:hidden" title="Hỏi đáp">
                 <i class="icontgdd-ask"></i>Hỏi đáp
             </a>
-            <a href="#" class="cardsim">
+            <a href="#" style="visibility:hidden" class="cardsim">
                 Sim số<br />
                 Thẻ cào
             </a>
             <a href="#" class="utility">
-                Đóng tiền điện,<br />
-                nước, trả góp
+                Giỏ hàng
             </a>
         </nav>
     </div>

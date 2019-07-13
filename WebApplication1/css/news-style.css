@@ -2819,3 +2819,8 @@ section {
             -moz-border-radius: 30px;
             border-radius: 30px
         }
+
+.leftcate {
+    float: none;
+    margin: 0 auto;
+}

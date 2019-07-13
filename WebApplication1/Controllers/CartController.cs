@@ -114,5 +114,42 @@ namespace WebApplication1.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
         }
+        [HttpPost]
+        public ActionResult GiamSoLuong(string idsp_giam)
+        {
+            List<SanPhamGioHang> listSPGH = Session["GioHang"] as List<SanPhamGioHang>; ;
+            if (listSPGH != null)
+            {
+                SanPhamGioHang spgiohang = listSPGH.FirstOrDefault(s => s.id == idsp_giam);
+                if (spgiohang != null)
+                {
+                    if (spgiohang.soluong > 1)
+                    {
+                        spgiohang.soluong--;
+                    }
+                    else
+                    {
+                        listSPGH.Remove(spgiohang);
+                    }
+                }
+                Session["GioHang"] = listSPGH;
+            }
+            return RedirectToAction("Purchase", "Cart");
+        }
+        [HttpPost]
+        public ActionResult TangSoLuong(string idsp_tang)
+        {
+            List<SanPhamGioHang> listSPGH = Session["GioHang"] as List<SanPhamGioHang>; ;
+            if (listSPGH != null)
+            {
+                SanPhamGioHang spgiohang = listSPGH.FirstOrDefault(s => s.id == idsp_tang);
+                if (spgiohang != null)
+                {
+                    spgiohang.soluong++;
+                }
+                Session["GioHang"] = listSPGH;
+            }
+            return RedirectToAction("Purchase", "Cart");
+        }
     }
 }
